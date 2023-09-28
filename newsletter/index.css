@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: 0;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #242742;
+    color:#242742;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 600px;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+div.content{
+    margin: 5px 10px;  
+    width: 80%;
+}
+.content h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.points{
+    margin:20px 0px;
+}
+.checklist{
+    line-height: 25px;
+}
+.checklist img{
+    margin-right: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    font-size:13px;
+}
+.form label{
+    font-weight: 700;
+}
+.form input{
+    height: 40px;
+    padding-left: 20px;
+    margin: 7px 0px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid rgb(128, 128, 128);
+}
+.form input:focus{
+    color: black;
+    outline: none;
+    border-color: black;
+}
+
+#subscribe{
+    background-color: #242537;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    height: 35px;
+    border-style:none;
+    cursor: pointer;
+    text-decoration: none;
+}
+#subscribe:active{
+    background:linear-gradient(to right, #ff6257,#ff7700);
+}
+.image{
+    width: 45%;
+    min-height: 300px;
+    margin: 5px 0px;
+    border-radius: 15px;
+    position: relative;
+    background: url(images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width:500px){
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+    }
+    .content{
+        padding-left: 20px;
+    }
+    .image{
+        bottom: 0%;
+        margin-bottom: 20px;
+        width: 100%;
+        background: url(images/illustration-sign-up-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

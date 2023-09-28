@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    color: hsl(219, 14%, 63%);
+}
+a{
+    text-decoration: none;
+    color: hsl(224, 21%, 14%);
+    font-weight: 800;
+}
+a:hover{
+    cursor: pointer;
+    color: blue;
+}
+.container{
+    height: 100%;
+    width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 20px grey;
+}
+.header{
+    display: flex;
+    padding:10px 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    color: hsl(224, 21%, 14%);
+}
+h3 span{
+    margin-left: 10px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 3px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+.header a{
+    position: absolute;
+    right: 0px;
+    color: hsl(219, 14%, 63%);
+    font-weight: 500;
+}
+.header a:hover{
+    color: blue;
+}
+.notification{
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.notification:nth-child(2),.notification:nth-child(3),.notification:nth-child(4){
+    background-color: hsl(210, 60%, 98%);
+}
+.notification:nth-child(6){
+    flex-direction: row;
+}
+.post{
+    color: hsl(219, 12%, 42%);
+}
+.notification:nth-child(4) .post{
+    color:hsl(224, 21%, 14%);
+}
+.notification:nth-child(4) .post:hover{
+    color:blue;
+}
+p.time{
+    padding-top: 5px;
+}
+.unread{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.733);
+    margin-left: 5px;
+}
+.picture{
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+.message{
+    margin-left: 60px;
+    padding: 10px 20px;
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+.message:hover{
+    cursor: pointer;
+    background-color: hsl(211, 68%, 94%);
+}
+figure{
+    display: flex;
+}
+.avatar{
+    border-radius: 50%;
+    margin-right: 12px;
+}
+figcaption{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    overflow: hidden;
+}
+@media  screen and(max-width:500px) {
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    
+}

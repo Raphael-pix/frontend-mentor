@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>E-commerce</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="logo" width="100px" height="20px">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="menu-items"><a href="/" class="menu-links">Collections</a></li>
+                    <li class="menu-items"><a href="/" class="menu-links">Men</a></li>
+                    <li class="menu-items"><a href="/" class="menu-links">Women</a></li>
+                    <li class="menu-items"><a href="/" class="menu-links">About</a></li>
+                    <li class="menu-items"><a href="/" class="menu-links">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="cart-top">
+                    <img src="images/icon-cart.svg" alt="shopping-cart" width="20px" height="20px">
+                </div>
+                <div class="profile">
+                    <img src="images/image-avatar.png" alt="avatar" width="40px" height="40px">
+                </div>
+                <div class="cart-body">
+                    <p class="cart-header">cart</p>
+                    <p class="cart-body">Your cart is empty</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-images">
+                <div class="main">
+                    <img src="images/image-product-1.jpg" alt="product" width="350px" height="350px">
+                </div>
+                <div class="others">
+                    <img src="images/image-product-1-thumbnail.jpg" class="selected" alt="thumbnail" width="60px" height="60px">
+                     <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+                     <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+                     <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+                </div>
+            </div>
+
+            <div class="product-details">
+                <h4>sneaker company</h4>
+                <h1>fall limited edition sneakers</h1>
+                <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                <div class="price">
+                    <h3 class="price-details">$ 125.00 <span>50%</span></h3>
+                    <p>$ 250.00</p>
+                </div>
+
+                <div class="cart">
+                    <div class="counter">
+                        <img src="images/icon-minus.svg" alt="increase">
+                        <input type="number" min="0">
+                        <img src="images/icon-plus.svg" alt="increase" >
+                    </div>
+                    <div class="cart-button">
+                        <img src="images/icon-cart.svg" alt="shopping-cart" width="15px" height="15px">
+                        <input type="submit" value="Add to cart" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="close" >
+            <img src="images/icon-close.svg" alt="close"  width="20px" height="20px" >
+        </div>
+            <div class="next" onclick="plusSlides(1) ">
+                <img src="images/icon-next.svg" alt="next"  width="15px" height="15px">
+            </div>
+            
+            <div class="main-img">
+                <img src="images/image-product-1.jpg" alt="product" width="400px" height="400px">
+            </div>
+            <div class="main-img">
+                <img src="images/image-product-2.jpg" alt="product" width="400px" height="400px">
+            </div>
+            <div class="main-img">
+                <img src="images/image-product-3.jpg" alt="product" width="400px" height="400px">
+            </div>
+            <div class="main-img">
+                <img src="images/image-product-4.jpg" alt="product" width="400px" height="400px">
+            </div>
+                                            
+            
+            <div class="previous" onclick="plusSlides(-1)" >
+                <img src="images/icon-previous.svg" alt="previous"  width="15px" height="15px">
+            </div>
+       
+       
+       
+        <div class="lightbox-others">
+            <img src="images/image-product-1-thumbnail.jpg" class="selected" alt="thumbnail" width="60px" height="60px">
+             <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+             <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+             <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+        </div>
+    </div>
+<script src="script.js" defer></script>
+</body>
+</html>

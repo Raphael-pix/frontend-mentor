@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    background-color:  #ffffff;
+    display: flex;
+    width: 600px;
+    box-shadow: 5px 10px 20px #45414144;
+    border-radius: 20px;
+}
+.summary{
+    color: rgba(255, 255, 255, 0.525);
+    background:linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.summary h3{
+    padding-bottom: 15px;
+}
+.summary h3:nth-child(3){
+    color: #ffffff;
+}
+.summary .result{
+    text-align: center;
+    margin-bottom: 5px;
+    background: linear-gradient( hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.result p b{
+    color: #ffffff;
+    font-size: 36px;
+}
+.data{
+    width: 50%;
+    color: hsl(224, 30%, 27%);
+    padding: 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    
+}
+.data h3{
+    margin-bottom: 10px;
+}
+.data figure{
+    margin-bottom: 12px;
+    display: flex;
+}
+figure p{
+    flex-grow: 1;
+    text-align: end;
+}
+.bold{
+    color: hsl(224, 30%, 27%);
+}
+.reaction, .memory, .verbal, .visual{
+    display: flex;
+    font-weight: 500;
+    padding: 11px;
+    border-radius: 10px; 
+    text-align: justify; 
+}
+.reaction figcaption, .memory figcaption, .verbal figcaption, .visual figcaption{
+    margin: 0px 10px;
+    margin-right: 60px;
+    width: 70px;
+}
+.reaction{
+    background-color: #ff575714;
+}
+.reaction figcaption{
+    color:#ff5757; 
+}
+.memory{
+    background-color: hsla(39, 100%, 56%, 0.078);
+}
+.memory figcaption{
+    color:hsl(39, 100%, 56%); 
+}
+.verbal{
+    background-color: hsla(166, 100%, 37%, 0.078);
+}
+.verbal figcaption{
+    color:hsl(166, 100%, 37%); 
+}
+.visual{
+    background-color:hsla(234, 85%, 45%,0.078);
+}
+.visual figcaption{
+    color:hsl(234, 85%, 45%);
+}
+button{
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border-style:none;
+    cursor: pointer;
+}
+button:active{
+    background:linear-gradient( hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+@media screen and (max-width:500px){
+    body{
+        overflow-y: auto;
+    }
+    .container,.summary,.data{  
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .summary{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .data{
+        padding-left: 30px;
+    }
+
+}

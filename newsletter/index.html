@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Sign up form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h3>Stay updated!</h3>
+            <p>Join 60,000+ product managers receiving monthly updates on: </p>
+            <div class="points">
+            <p class="checklist"><img src="images/icon-list.svg" alt="icon" width="15px" height="15px">Product discovery and building what matters</p>
+            <p class="checklist"><img src="images/icon-list.svg" alt="icon" width="15px" height="15px">Measuring to ensure updates are a success</p>
+            <p class="checklist"><img src="images/icon-list.svg" alt="icon" width="15px" height="15px">And much more!</p>
+            </div>
+            <form action="/" submit="return validate();" class="form" name="emailForm">
+                <label for="email">Email address <span class="error"></span></label>
+                <input type="email" placeholder="email@company.com" name="email" class="email" required>
+                <input type="submit" value=" Subscribe to monthly newsletter" id="subscribe">
+            </form>
+        </div>
+        <div class="image">
+            <!-- <img src="images/illustration-sign-up-desktop.svg" alt="illustration-image" width="200px" height="300px"> -->
+        </div>
+    </div>
+    <script defer src="index.js"></script>
+</body>
+</html>

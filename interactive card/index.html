@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Card-detail</title>
+</head>
+<body>
+        <div class="side">
+        
+        </div>
+        <div class="cards">
+        <div class="frontCard">
+            <div class="top">
+                <span class="logo"></span>
+                <span class="circle"></span>
+            </div>
+            <h4>0000 0000 0000 0000</h4>
+            <div class="details">
+                <p>jane appleseed</p>
+                <p class="data">00/00</p>
+            </div>
+        </div>
+        <div class="backCard">
+
+        </div>
+        </div>
+        <div class="form">
+            <form action="" class="form-content">
+                <label for="cardholderName"> cardholder Name</label>
+                <input type="text" name="cardholderName"  class="cardholderName" placeholder="e.g. Jane Appleseed" required>
+            
+                <label for="cardNumber"> card Number</label>
+                <input type="text" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000" required>
+                <span class="error"></span>
+            
+                
+                <div class="bottom">
+                <div class="date">
+                    <label for="date" > exp. date (mm/yy)</label>
+                    
+                    <div class="input">
+                    <input type="number" name="date" placeholder="MM" required>
+                    <input type="number" name="date" placeholder="YY" required>
+                    </div>
+                    <span class="error"></span>
+                
+                </div>    
+                <div class="cvc">
+                    <label for="cvc"> cvc</label>
+                    <div class="input">
+                    <input type="number" name="cvc" placeholder="e.g. 123" required>
+                    </div>
+                    <span class="error"></span>
+                </div>
+                
+                </div>
+                
+                <button class="confirm">Confirm</button>
+            </form>
+        </div>
+    
+    
+</body>
+</html>

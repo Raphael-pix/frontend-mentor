@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 20px 100px;
+    font-size: 16px;
+    position: relative;
+}
+span{
+    display: inline-block;
+}
+
+/*top navigation bar*/
+
+.navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #8080809a;
+    
+}
+.logo{
+    margin-right: 15px;
+}
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 30px;
+}
+.menu-items{
+    margin: 0px 10px;
+}
+ .menu-links{
+    text-decoration: none;
+    color: grey;
+    padding-bottom: 30px;
+}
+.menu-links:hover{
+    border-bottom: 3px solid #ff7d1a;
+    color: black;
+}
+.right{
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height:80px;
+    z-index: 1;
+}
+.cart-top:hover{
+    cursor: pointer;
+}
+.cart-body{
+    position: absolute;
+    bottom: -170px;
+    left: -250px;
+    width: 300px;
+    height: 190px;
+    border-radius: 7px;
+    box-shadow: 1.5px 1px #80808045;
+    z-index: 2;
+    background-color: white;
+    display: none;
+}
+ .cart-header{
+    padding: 20px 15px;
+    border-bottom: 1.4px solid #8080804a;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+ .cart-body{
+    color: #8080809a;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700px;
+}
+.profile{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.profile:hover{
+    cursor: pointer;
+    border: 2px solid #ff7d1a ;
+}
+
+
+
+/*main body*/
+
+.product{
+    display: flex;
+    margin-top: 60px;
+    margin-left: 30px;
+    z-index: 1;
+    /* visibility: hidden; */
+}
+.product-images{
+    margin-right: 50px;
+}
+.main img, .lightbox img{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.others,.lightbox-others{
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+}
+.others img{
+    border-radius: 5px;
+}
+.others>img.selected{
+  opacity: 0.5;
+  border: 2px solid hsl(26, 100%, 55%);
+}
+.product-details{
+    width: 510px;
+    padding: 30px 40px;
+   
+}
+.product-details h4{
+    font-size: 10px;
+    font-weight: 700;
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    padding-bottom: 7px;
+}
+.product-details h1{
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.product-details .description{
+    color:  hsl(219, 9%, 45%);
+    margin-bottom: 10px;
+}
+.price{
+    margin-bottom: 20px;
+}
+.price h3{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.price-details span{
+    width: 25px;
+    height: 13px;
+    border-radius: 2px;
+    margin-left: 5px;
+    font-size: 10px;
+    color:#ff7d1a;
+    background-color: hsl(25, 100%, 94%);
+    text-align: center;
+}
+.price p{
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+.cart{
+    display: flex;
+}
+.counter{
+    background-color:  hsl(223, 64%, 98%);
+    border-radius: 5px;
+    margin-right: 7px;
+    height: 30px;
+    padding: 4px 7px;
+}
+.cart input[type= number]{
+    width: 50px;
+    border: none;
+    background-color: transparent;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.cart-button{
+    background-color: #ff7d1a;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+}
+.cart input[type= submit]{
+    border: none;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    background-color: transparent;
+    justify-self: center;
+}
+
+/* light-box */
+.box{
+    display: none;
+    visibility: hidden;
+}
+.box .main-img{
+    display: none;
+}
+.lightbox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    z-index: 2;
+    padding: 0px 20px;
+    visibility: visible;
+    position: absolute;
+    top: 5%;
+    left:25%;
+}
+.close{
+    width: 90px;
+    margin:15px 0px;
+}
+.close img{
+    margin-left: 40px;
+}
+.previous, .next{
+    width: 45px;
+    height: 45px;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: absolute;
+    top:250px;
+}
+.previous{
+    left: 0px;
+}
+.next{
+    right: 0px;
+}
+.close{
+    position: relative;
+    left: 340px;
+}
