@@ -26,11 +26,20 @@
                     <img src="images/icon-cart.svg" alt="shopping-cart" width="20px" height="20px">
                 </div>
                 <div class="profile">
-                    <img src="images/image-avatar.png" alt="avatar" width="40px" height="40px">
+                    <img src="images/image-avatar.png" alt="avatar" class="profile-pic" width="40px" height="40px">
                 </div>
                 <div class="cart-body">
                     <p class="cart-header">cart</p>
-                    <p class="cart-body">Your cart is empty</p>
+                    <div class="cart-content">
+                        <figure class="cart-product">
+                            <img src="images/image-product-1-thumbnail.jpg" alt="Product picture" class= "cart-image" width="40px" height="40px">
+                            <figcaption class="cart-caption">
+                                Fall Limited Edition Sneakers $125.00 &#215 <span class="cartAmount"></span> <b > $ <span class="placeholder"></span> </b>
+                            </figcaption>
+                            <img src="images/icon-delete.svg" alt="delete" width="15px" height="15px">
+                        </figure>
+                        <button class="checkout">Checkout</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,13 +47,21 @@
         <div class="product">
             <div class="product-images">
                 <div class="main">
-                    <img src="images/image-product-1.jpg" alt="product" width="350px" height="350px">
+                    <img src="images/image-product-1.jpg" alt="product"  width="400px" height="350px">
                 </div>
                 <div class="others">
-                    <img src="images/image-product-1-thumbnail.jpg" class="selected" alt="thumbnail" width="60px" height="60px">
-                     <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
-                     <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
-                     <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+                    <div class="others-images">
+                        <img src="images/image-product-1-thumbnail.jpg" class="selected" alt="thumbnail" width="80px" height="10px">
+                    </div>
+                    <div class="others-images">
+                        <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail" width="80px" height="30px">
+                    </div>
+                    <div class="others-images">
+                        <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+                    </div>
+                     <div class="others-images">
+                        <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail" width="60px" height="60px">
+                     </div>
                 </div>
             </div>
 
@@ -59,13 +76,13 @@
 
                 <div class="cart">
                     <div class="counter">
-                        <img src="images/icon-minus.svg" alt="increase">
-                        <input type="number" min="0">
-                        <img src="images/icon-plus.svg" alt="increase" >
+                        <input type="image" src="images/icon-minus.svg" alt="decrease" class = "minus" onclick="decreasreCount()">
+                        <span class="count"></span>
+                        <input type="image" src="images/icon-plus.svg" alt="increase" class="plus" onclick="increasreCount()">
                     </div>
                     <div class="cart-button">
                         <img src="images/icon-cart.svg" alt="shopping-cart" width="15px" height="15px">
-                        <input type="submit" value="Add to cart" >
+                        <input type="submit" value="Add to cart" class="addToCart" >
                     </div>
                 </div>
             </div>

@@ -7,6 +7,12 @@ const product = document.querySelector(".product")
 const close = document.querySelector(".close")
 const cart = document.querySelector(".cart-top")
 const cartcontent = document.querySelector(".cart-body");
+const cartCount = document.querySelector(".count");
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const addCart=document.querySelector(".addToCart");
+const amount = document.querySelector(".cartAmount")
+const totalPrice = document.querySelector(".placeholder")
 
 mainImage.addEventListener("click", ()=>{
     lightbox.classList.add("lightbox")
@@ -49,4 +55,28 @@ function showSlides(n) {
     cartcontent.style.display = "block";
   }
   isVisible = !isVisible;
+ })
+
+ let count = 0;
+ function increasreCount(){
+  count ++;
+  cartCount.textContent = count;
+  console.log(count)
+ }
+ function decreasreCount(){
+  if (count >= 1){
+    count --;
+  cartCount.textContent = count;
+  console.log(count)
+  }
+ }
+
+ let price = 125
+ addCart.addEventListener("click",()=>{
+  cartCount.textContent = 0
+  amount.textContent = count
+  price *= count;
+  count = 0;
+  totalPrice.textContent = price;
+  price = 125
  })
