@@ -3,49 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table,td,th{
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="style.css">
+    <title>Snap - dropdown Menu</title>
 </head>
 <body>
-    <h1>Title </h1>
-    <p >Hello world</p>
-    <a href="https://www.google.com/" target="_self">Go to google</a>
-    <ul>
-        <li><a href="https://www.google.com/" target="_self">Home</a></li>
-        <li><a href="https://www.google.com/" target="_self">Contacts</a></li>
-        <li><a href="https://www.google.com/" target="_self">About</a></li>
-    </ul>
-    <ol>
-        <li>Milk</li>
-        <li>Coffee</li>
-        <li>Tea</li>
-    </ol>
+    <div class="container">
+        <div class="top-bar">
+            
+            <img src="images/logo.svg" alt="logo" width="60px" height="30px">
+            
+            <div class="nav-bar">
+                <ul class="nav-list">
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a href="" class="nav-link btn-primary dropdown-toggle" data-toggle="dropdown">Features</a>
+                                <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow">
+                                <img src="images/icon-arrow-up.svg" alt="arrow-up" class="arrow">
+                                <ul class="dropdown-menu">   
+                                    <li class="dropdown-item">
+                                        <img src="images/icon-todo.svg" alt="todo">
+                                        <a href="" class="dropdown-link">Todo List</a>
+                                    </li>
 
-    <dl>
-        <dt>Coffee</dt>
-        <dd>Hot with chocolate</dd>
-    </dl>
+                                    <li class="dropdown-item">
+                                        <img src="images/icon-calendar.svg" alt="calender">
+                                        <a href="" class="dropdown-link">Calender</a>
+                                    </li>
 
-    <table>
-        <tr  >
-            <th >Name</th>
-            <th>Age</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>Mark</td>
-            <td>19</td>
-        </tr>
-        <tr>
-            <td>Raphael</td>
-            <td>19</td>
-        </tr>
-    </table>
-    
-    <p >Please visit our <a href="/" >website to see more about us</a></p>
+                                    <li class="dropdown-item">
+                                        <img src="images/icon-reminders.svg" alt="reminder">
+                                        <a href="" class="dropdown-link">reminders</a>
+                                    </li>
+
+                                    <li class="dropdown-item">
+                                        <img src="images/icon-planning.svg" alt="planning">
+                                        <a href="" class="dropdown-link">Planning</a>
+                                    </li>
+
+                                </ul>
+                        </li>
+                    </div>
+                    
+                    <div class="dropdown">
+                    <li class="nav-item">
+                        <a href=""  class=" nav-link btn-primary dropdown-toggle" data-toggle="dropdown">Company</a>
+                            <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow">
+                            <img src="images/icon-arrow-up.svg" alt="arrow-up" class="arrow">
+                            <ul class="dropdown-menu">
+                                
+                                <li class="dropdown-item">
+                                    <a href="" class="dropdown-link">History</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="" class="dropdown-link">Our Team</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="" class="dropdown-link">Blog</a>
+                                </li>
+                            
+                            </ul>
+
+                    </li>
+                    
+
+                </div>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Careers</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="" class="nav-link">About</a>
+                    </li>
+                </ul>
+            
+            
+            </div>
+        
+            <div class=" nav-right">
+                <button class="nav-button">Login</button>
+                <button class="nav-button">Register</button>
+            </div>
+        
+        </div>
+        <!-- main body -->
+        <div class="main-body">
+            <div class="content">
+                <h1 class="content-heading">Make remote work</h1>
+                <p class="content-paragraph">Get your team in sync, no matter your location. Streamline Processes, create team rituals, and watch productivity soar</p>
+                <button class="content-button">Learn more</button>
+                <div class="sponsors">
+                    <img src="images/client-databiz.svg" alt="databiz" class="logo">
+                    <img src="images/client-audiophile.svg" alt="audiophile" class="logo">
+                    <img src="images/client-meet.svg" alt="meet" class="logo">
+                    <img src="images/client-maker.svg" alt="marker" class="logo">
+                </div>
+            </div>
+           
+            <div class="main-body-image">
+            <img src="images/image-hero-desktop.png" alt="image" height="450px" width="350px">
+           </div>
+
+        </div>
+
+
+    </div>
+
+
 </body>
 </html>

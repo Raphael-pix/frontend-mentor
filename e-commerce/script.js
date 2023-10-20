@@ -13,6 +13,9 @@ const minus = document.querySelector(".minus");
 const addCart=document.querySelector(".addToCart");
 const amount = document.querySelector(".cartAmount")
 const totalPrice = document.querySelector(".placeholder")
+const holder = document.querySelector(".holder")
+const emptyCartText = document.querySelector(".emptyCart")
+const deleteEl = document.querySelector(".delete");
 
 mainImage.addEventListener("click", ()=>{
     lightbox.classList.add("lightbox")
@@ -79,4 +82,15 @@ function showSlides(n) {
   count = 0;
   totalPrice.textContent = price;
   price = 125
+
+  holder.style.display = "block"
+  emptyCartText.style.display="none";
+
+  
+
+ })
+
+ deleteEl.addEventListener("click", ()=>{
+  holder.style.display = "none"
+  emptyCartText.style.display="block"
  })

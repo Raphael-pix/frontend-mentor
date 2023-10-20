@@ -24,6 +24,7 @@
             <div class="right">
                 <div class="cart-top">
                     <img src="images/icon-cart.svg" alt="shopping-cart" width="20px" height="20px">
+                    <!-- <span class="notification">3</span> -->
                 </div>
                 <div class="profile">
                     <img src="images/image-avatar.png" alt="avatar" class="profile-pic" width="40px" height="40px">
@@ -31,14 +32,17 @@
                 <div class="cart-body">
                     <p class="cart-header">cart</p>
                     <div class="cart-content">
-                        <figure class="cart-product">
-                            <img src="images/image-product-1-thumbnail.jpg" alt="Product picture" class= "cart-image" width="40px" height="40px">
-                            <figcaption class="cart-caption">
-                                Fall Limited Edition Sneakers $125.00 &#215 <span class="cartAmount"></span> <b > $ <span class="placeholder"></span> </b>
-                            </figcaption>
-                            <img src="images/icon-delete.svg" alt="delete" width="15px" height="15px">
-                        </figure>
-                        <button class="checkout">Checkout</button>
+                        <p class="emptyCart">Your Cart is Empty</p>
+                        <div class="holder">
+                             <figure class="cart-product">
+                                 <img src="images/image-product-1-thumbnail.jpg" alt="Product picture" class= "cart-image" width="40px" height="40px">
+                                 <figcaption class="cart-caption">
+                                     Fall Limited Edition Sneakers $125.00 &#215 <span class="cartAmount"></span> <b > $ <span class="placeholder"></span> </b>
+                                 </figcaption>
+                                 <img src="images/icon-delete.svg" alt="delete" class="delete" width="15px" height="15px">
+                             </figure>
+                             <button class="checkout">Checkout</button>
+                        </div>
                     </div>
                 </div>
             </div>
