@@ -34,8 +34,9 @@ a{
     background-color: none;
     font-size: 14px;
 }
-.arrow{
-    display: inline;
+
+.arrow1:hover{
+    cursor: pointer;
 }
 .nav-link:hover, .nav-link:active,.nav-button:hover,.arrow-down:hover,.arrow-down:active{
     color: hsl(0, 0%, 8%);
@@ -75,7 +76,11 @@ a{
     margin-top: 20px;
     box-shadow: 3px 2px 7px hsl(0, 0%, 41%);
     border-radius: 8px;
+    background-color: white;
+}
+.dropdown-menu-company,.dropdown-menu-features{
     display: none;
+   
 }
 .dropdown-item{
     display: flex;

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  -->
     <link rel="stylesheet" href="style.css">
     <title>Snap - dropdown Menu</title>
 </head>
@@ -19,52 +19,54 @@
                 <ul class="nav-list">
                     <div class="dropdown">
                         <li class="nav-item">
-                            <a href="" class="nav-link btn-primary dropdown-toggle" data-toggle="dropdown">Features</a>
-                                <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow">
-                                <img src="images/icon-arrow-up.svg" alt="arrow-up" class="arrow">
-                                <ul class="dropdown-menu">   
-                                    <li class="dropdown-item">
-                                        <img src="images/icon-todo.svg" alt="todo">
-                                        <a href="" class="dropdown-link">Todo List</a>
-                                    </li>
+                            <a href="" class=" nav-link">Features</a>
+                                <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow1">
+                                <img src="images/icon-arrow-up.svg" alt="arrow-up" class="arrow2">
+                                <div class="dropdown-menu-features">
+                                    <ul class="dropdown-menu">   
+                                        <li class="dropdown-item">
+                                            <img src="images/icon-todo.svg" alt="todo">
+                                            <a href="" class="dropdown-link">Todo List</a>
+                                        </li>
 
-                                    <li class="dropdown-item">
-                                        <img src="images/icon-calendar.svg" alt="calender">
-                                        <a href="" class="dropdown-link">Calender</a>
-                                    </li>
+                                        <li class="dropdown-item">
+                                            <img src="images/icon-calendar.svg" alt="calender">
+                                            <a href="" class="dropdown-link">Calender</a>
+                                        </li>
 
-                                    <li class="dropdown-item">
-                                        <img src="images/icon-reminders.svg" alt="reminder">
-                                        <a href="" class="dropdown-link">reminders</a>
-                                    </li>
+                                        <li class="dropdown-item">
+                                            <img src="images/icon-reminders.svg" alt="reminder">
+                                            <a href="" class="dropdown-link">reminders</a>
+                                        </li>
 
-                                    <li class="dropdown-item">
-                                        <img src="images/icon-planning.svg" alt="planning">
-                                        <a href="" class="dropdown-link">Planning</a>
-                                    </li>
-
-                                </ul>
+                                        <li class="dropdown-item">
+                                            <img src="images/icon-planning.svg" alt="planning">
+                                            <a href="" class="dropdown-link">Planning</a>
+                                        </li>
+                                    </ul>
+                                </div>
                         </li>
                     </div>
                     
                     <div class="dropdown">
                     <li class="nav-item">
-                        <a href=""  class=" nav-link btn-primary dropdown-toggle" data-toggle="dropdown">Company</a>
+                        <a href=""  class=" nav-link">Company</a>
                             <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow">
                             <img src="images/icon-arrow-up.svg" alt="arrow-up" class="arrow">
-                            <ul class="dropdown-menu">
-                                
-                                <li class="dropdown-item">
-                                    <a href="" class="dropdown-link">History</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="" class="dropdown-link">Our Team</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="" class="dropdown-link">Blog</a>
-                                </li>
-                            
-                            </ul>
+                           
+                            <div class="dropdown-menu-company">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">
+                                        <a href="" class="dropdown-link">History</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="" class="dropdown-link">Our Team</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="" class="dropdown-link">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
 
                     </li>
                     
@@ -111,6 +113,6 @@
 
     </div>
 
-
+<script src="script.js" defer></script>
 </body>
 </html>
