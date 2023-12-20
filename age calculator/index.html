@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/favicon-32x32.png">
     <title>Age calculator</title>
 </head>
 <body>
     <div class="container">
         <div class="input">
             <form action="/" class="dateInput" name="dateInput" onsubmit="return validate();">
-                <div class="form">
-                <label for="Day">DAY</label>
-                <input type="number" name="Day" id="day" placeholder="DD"  required>
-                <span class="error"></span>
-                </div>
-                
-                <div class="form">
-                <label for="Month">MONTH</label>
-                <input type="number" name="Month" id="month" placeholder="MM"  required>
-                <span class="error"></span>
-                </div>
-                
-                <div class="form">
-                <label for="Year">YEAR</label>
-                <input type="number" name="Year" id="year" placeholder="YYYY" required>
-                <span class="error"></span>
-                </div>
+                <div class="form-elements">
+                    <div class="form">
+                    <label for="Day">DAY</label><br>
+                    <input type="number" name="Day" id="day" placeholder="DD"  required><br>
+                    <span class="error"></span>
+                    </div>
+                    
+                    <div class="form">
+                    <label for="Month">MONTH</label><br>
+                    <input type="number" name="Month" id="month" placeholder="MM"  required><br>
+                    <span class="error"></span>
+                    </div>
+                    
+                    <div class="form">
+                    <label for="Year">YEAR</label><br>
+                    <input type="number" name="Year" id="year" placeholder="YYYY" required><br>
+                    <span class="error"></span>
+                    </div>
+                 </div>
                 
                 <div class="image">
                    <input type="image" src="images/icon-arrow.svg" alt="submit" width="40px" height="40px">

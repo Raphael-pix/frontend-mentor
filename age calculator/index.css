@@ -11,46 +11,56 @@ body{
     align-items: center;
     background-color: whitesmoke;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400i;
+    font-weight: 400;
 }
 .container{
-    display: flex;
-    flex-direction: column;
+    max-width: 700px;
     border-radius: 20px;
     border-bottom-right-radius: 25%;
     background-color: white;
-    padding: 20px;
-    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto 10px;
+}
+.input{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
 }
 .dateInput {
     display: flex;
-    color:  #716f6f;
-    border-bottom: 2px solid #dbdbdb;  
-    margin-bottom: 30px;
+    flex-direction: column;
+    color:  #716f6f;  
+    max-width: 700px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.form{
+.form-elements{
     display: flex;
-    flex-direction: column;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid #dbdbdb;
+}
+.form{
     margin: 20px;
     font-weight:700;
 }
 .form input{
-    margin: 7px 0px;
+    margin: 10px 0px;
     padding: 5px 10px;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
-    width: 8rem;
+    max-width: 110px;
     border:  1px solid #dbdbdb;
     border-radius: 8px;
     cursor: pointer;
 }
 .form input:focus{
-    border: 1px solid #854dff;
+    border: 1.5px solid #854dff;
     outline: none;
 }
 .form .error{
@@ -64,7 +74,7 @@ input::-webkit-inner-spin-button {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 25px;
+    bottom: 25px;
     width: 60px;
     height: 60px;
     background-color:  #854dff;
@@ -81,4 +91,25 @@ input::-webkit-inner-spin-button {
 }
 .age span{
     color:#854dff
+}
+@media screen and (max-width:520px){
+    .container,.input,.dateInput{
+        width: 100%;
+    }
+    .dateInput{
+        flex-direction: column;
+    }
+    .image{
+        align-self: center;
+        bottom: 25px;
+    }
+    .form{
+        margin-right:10px;
+    }
+    .form input{
+        font-size: 1.5rem;
+        width: 100%;
+        min-width: 85px;
+    }
+
 }
