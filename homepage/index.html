@@ -1,85 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Homepage</title>
-</head>
-<body>
-    <header>
-        <img src="images/logo.svg" alt="logo" width="50px" height="30px">
-        <ul class="menu">
-        <li class="menu-item"><a href="/">Home</a></li>
-        <li class="menu-item"><a href="/">New</a></li>
-        <li class="menu-item"><a href="/">Popular</a></li>
-        <li class="menu-item"><a href="/">Trending</a></li>
-        <li class="menu-item"><a href="/">Categories</a></li>
-        <li class="menu-icon"><a href="/"><img src="images/icon-menu.svg" alt="image" width="30px" height="20px"></a></li>
-        <li class="menu-icon"><a href="/"><img src="images/icon-menu.svg" alt="image" width="30px" height="20px"></a></li>
-        </ul>
-    </header>
-    <main>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        
+        <img src="images/logo.svg" alt="logo" width="50px" height="30px" />
+       
+        <nav class="menu">
+          <a href="/">Home</a>
+          <a href="/">New</a>
+          <a href="/">Popular</a>
+          <a href="/">Trending</a>
+          <a href="/">Categories</a>
+        </nav>
+      
+        <img src="images/icon-menu.svg" alt="menu" width="30px" height="20px" class="menu-icon">
+        <img src="images/icon-menu-close.svg" alt="close" width="20px" height="20px" class="close">
+      
+      </header><br>
+      
+      
+      <section class="main">
         <div class="main1">
-            <img src="images/image-web-3-desktop.jpg" alt="image" width="200px" height="100px">
+            <img
+              src="images/image-web-3-desktop.jpg"
+              alt="image"
+              width="580x"
+              height="600px"
+            />
             <div class="content-container">
-            <h1>The Bright Future of Web 3.0?</h1>
-            <div class="content">
-            <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
-            <button class="more">Read more</button>
-        </div>
+              <h1>The Bright Future of Web 3.0?</h1>
+              <div class="content">
+                <p>
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <button class="more btn">Read more</button>
+              </div>
             </div>
-        </div>
-        
-        <div class="side">
+          </div>
+          
+          <div class="side">
             <h1>New</h1>
-            
             <div class="post">
-                <a href="/"><h3>hydrogen vs electric cars</h3></a>
-                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+              <a href="/"><h3>hydrogen vs electric cars</h3></a>
+              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
             </div>
-            
             <div class="post">
-                <a href="/"><h3>the downside of AI artistry</h3></a>
-                <p>What are the possible adverse effects of on-demand AI image generation?</p>
+              <a href="/"><h3>the downside of AI artistry</h3></a>
+              <p>
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
             </div>
-            
             <div class="post">
-                <a href="/"><h3>is VC funding drying up?</h3></a>
-                <p>Private funding by VC films is down 50% YOY. We take a look at what that means.</p>
+              <a href="/"><h3>is VC funding drying up?</h3></a>
+              <p>
+                Private funding by VC films is down 50% YOY. We take a look at
+                what that means.
+              </p>
             </div>
-        </div>
-        
+          </div>
+        </section>
+
         <div class="main2">
-            <figure class="news">
-                <img src="images/image-retro-pcs.jpg" alt="image" width="70px" height="100px">
-                <figcaption>
-                    <h2>01</h2>
-                    <a href="/"><h3>retriving retro PCs</h3></a>
-                    <p>What happens when old PCs are given mordern upgrades?</p>
-                </figcaption>
-            </figure>
+          <figure class="news">
+            <img
+              src="images/image-retro-pcs.jpg"
+              alt="image"
+              width="90px"
+              height="100px"
+            />
+            <figcaption>
+              <h2>01</h2>
+              <a href="/"><h3>retriving retro PCs</h3></a>
+              <p>What happens when old PCs are given mordern upgrades?</p>
+            </figcaption>
+          </figure>
 
-            <figure class="news">
-                <img src="images/image-top-laptops.jpg" alt="image" width="70px" height="100px">
-                <figcaption>
-                    <h2>02</h2>
-                    <a href="/"><h3>top 10 laptops of 2022</h3></a>
-                    <p>Our best picks for various needs and budgets.</p>
-                </figcaption>
-            </figure>
+          <figure class="news">
+            <img
+              src="images/image-top-laptops.jpg"
+              alt="image"
+              width="90px"
+              height="100px"
+            />
+            <figcaption>
+              <h2>02</h2>
+              <a href="/"><h3>top 10 laptops of 2022</h3></a>
+              <p>Our best picks for various needs and budgets.</p>
+            </figcaption>
+          </figure>
 
-            <figure class="news">
-                <img src="images/image-gaming-growth.jpg" alt="image" width="70px" height="100px">
-                <figcaption>
-                    <h2>03</h2>
-                    <a href="/"><h3>the growth of gaming</h3></a>
-                    <p>How the pandemic has sparked fresh opportunities.</p>
-                </figcaption>
-            </figure>
+          <figure class="news">
+            <img
+              src="images/image-gaming-growth.jpg"
+              alt="image"
+              width="90px"
+              height="100px"
+            />
+            <figcaption>
+              <h2>03</h2>
+              <a href="/"><h3>the growth of gaming</h3></a>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </figcaption>
+          </figure>
         </div>
+    </div>
     
-    </main>
-    
-</body>
+    <script src="index.js" defer></script>
+  </body>
 </html>

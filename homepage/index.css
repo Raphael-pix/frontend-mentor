@@ -3,175 +3,198 @@
     margin: 0;
     padding: 0;
     box-sizing:border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    border-style: none;
+    /* transition:  0.1s linear; */
 }
 body{
-    min-height: 100vh;
-    /* overflow: hidden; */
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    margin:  10px 100px;
-    position: relative;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    margin:  1em 3em;
+    font-size: calc(10px + 0.5vw) ;
     color:  hsl(36, 100%, 99%);
 }
+.container{
+    position: relative;
+    padding: 2rem;
+}
 header{
-    display: flex;
-    padding: 20px;
-}
-.menu{
-    list-style-type: none;
-    display: flex;
     position: absolute;
-    right: 0;
+    top: 0;right: 0;left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem;
+    z-index: 1000;
 }
-.menu-item a{  
-    margin-right: 20px;
-    text-decoration: none;
-    color:  hsl(60, 1%, 30%);
+.menu a{
+    font-size: 1rem;
+    padding:0.4rem;
+    color:hsl(60, 1%, 30%);
 }
-.menu-item a:active,.menu-item a:hover,.post h3:active {
-    color: hsl(5, 85%, 63%);
+.menu a:hover{
+    color: hsl(5, 85%, 63%);;
+    cursor: pointer;
 }
-.menu-icon{
+header .menu-icon, header .close{
     display: none;
+    z-index: 2;
 }
-main{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: minmax(150px,auto);
+.main{
+    display:flex;
+    padding:2.2rem 0;
 }
 .main1{
-    grid-column: 1/3;
-    padding: 5px 25px;
+    flex:1 1 70rem;
+    margin-right: 2rem;
 }
 .main1 img{
     width: 100%;
-    height: 250px;
+    height: auto;
 }
-.content-container{
+.main1 .content-container{
     display: flex;
-    padding: 20px 0px;
+    align-items: center;
+    padding: 1.2rem 0;
+    color:black;
 }
 .content-container h1{
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: 800;
-    width: 270px;
-    margin-right: 50px;
-    color:  hsl(240, 100%, 5%);
+    color:  hsl(240, 100%, 5%); 
+    padding-right: 2rem;
+    flex:1 1 60rem
 }
-.content{
-    width: 350px;
+.content-container .content{
+    flex: 1 1 70rem;
+}
+
+ .content p{
+    font-size: 1rem;
     font-weight: 500;
     color:  hsl(60, 1%, 30%);
 }
-.content button{
+
+ .content .btn{
     background-color:  hsl(5, 85%, 63%);
-    margin-top: 20px;
-    width: 50%;
-    height: 40px;
     text-align: center;
-    border-style: none;
     color: white;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-top:2rem;
+    padding: .7rem 1rem;
 }
-.content button:active,.content button:hover{
+.content .btn:hover, .content .btn:active{
+    cursor: pointer;
    background-color:hsl(240, 100%, 5%);
 }
+
 .side{
-    grid-column: 3/-1;
+    flex: 1 1 35rem;
+    height: 100%;
     background-color:  hsl(240, 100%, 5%);
-    padding: 20px 15px;
+    padding: 2rem 1.5rem;
 }
-.side>h1{
+.side h1{
+    font-size: 2.4rem;
     color:hsl(35, 77%, 62%);
-    font-weight: 800;
+    font-weight: 800; 
+    margin-bottom:.6rem ;
 }
-.post{
-    padding: 20px 0px;
+.side .post{
+    padding: 1.4rem 0;
     border-bottom: 1px solid white;
 }
-.post:nth-child(4){
+.side .post:nth-child(4){
     border-bottom: none;
     padding-bottom: 0px;
 }
 .post a{
-    text-decoration: none;
+    text-transform: capitalize;
     color: white;
 }
 .post a:hover,.post a:active{
     color: hsl(35, 77%, 62%);
 }
-.post h3{
-    padding-bottom: 10px;
-    text-transform: capitalize;
+.post p{
+    font-size: 1rem;
+    padding: .5rem 0;
 }
+
 .main2{
-    grid-column: 1/-1;
     display: flex;
-    margin-top: 30px;
+    gap: 5rem;
     color:  hsl(240, 100%, 5%);
 }
-.news{
+.main2 .news{
     display: flex;
-    overflow: auto;
+    gap: 1rem
 }
-.news figcaption{
-    padding: 0px 20px;
-    color: hsl(60, 1%, 30%); 
-    font-weight: 500;
+.news figcaption h2{
+    color:  hsl(60, 1%, 30%); 
+    padding-bottom: .3rem;
 }
-figcaption a{
-    text-decoration: none;
-}
-figcaption h3{
+.news figcaption h3{
     color: hsl(240, 100%, 5%); 
-    padding: 7px 0px;
+    font-size: .9rem;
 }
 figcaption h3:active,figcaption h3:hover{
     color:hsl(5, 85%, 63%) ;
 }
-@media screen and (max-width:500px){
+.news figcaption p{
+    font-size: .8rem;
+    color:  hsl(60, 1%, 30%); 
+    padding-top: .5rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width:540px){
     body{
-        width: 100%;
-        margin: 0px 10px;
+        margin: 0;
+    }    
+    .container{
+        padding: 1.5rem;
     }
-    .content-container h1,.content{
-        width: 100%;
+    header{
+        padding: 1rem;
     }
-    main, .main1, .main2 , .content-container{
-        display: flex;
-        flex-direction: column;
-    }
-    .header{
-        position: absolute;
-    }
-    .menu{
-        flex-direction: column;
-        width: 70%;
-        background-color: white;
-        
-    }
-    .menu-item{
-        position: relative;
-        top: 100px;
-        padding: 15px 20px;
-        z-index: 1;
-        color:hsl(240, 100%, 5%);
-        font-weight: 500;
-        display: none;
-    }
-    .menu-icon{
-        position: absolute;
-        top: 0;
-        right: 30px;
+    header .menu-icon{
         display: block;
     }
-    .news{
-       margin-bottom: 20px; 
+    header .close{
+        display: none;
     }
-    
+    header .menu{
+        position: absolute;
+        top:0; right: 0;
+        min-height:100vh;
+        width: 60%;
+        padding-top: 3rem;
+        display: none;
+        background-color: white;
+    }
+
+    header .menu a{
+        display: block;
+        margin: 1rem;
+        padding: 0.8rem;
+    }
+    .main{
+        display:block;
+        padding: 1.4rem 0;
+    }
+    .main1{
+        margin-right: 0;
+    }
+    .main1 .content-container{
+        display: block;
+    }
+    .main2{
+        display: block;
+        padding: 1.2rem 0;
+    }
+    .main2 .news{
+        padding-bottom: 1rem;
+    }
+
 }
