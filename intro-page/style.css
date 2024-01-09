@@ -1,151 +1,294 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
-*{
-    margin:0;
-    padding:0;
+ @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+:root{
+    --main-color:hsl(0, 0%, 41%);
+    --black:hsl(0, 0%, 8%);
+    --white:hsl(0, 0%, 98%);
+}
+
+ *{
+    margin:0;padding:0;
     box-sizing: border-box;
-    
-}
-body{
     font-family: 'Epilogue', sans-serif;
-    min-width: 100vh;
-}
-.container{
-    margin: 30px;
-}
-li{
+    text-decoration: none; 
+    outline: none;border: none;
+    text-transform: capitalize;
     list-style-type: none;
 }
-a{
-    text-decoration: none;
+html{
+    font-size:80% ;
+    overflow-x: hidden;
 }
-.top-bar{
+.container{
+    margin:0 0.7rem;
+    padding: 1.2rem;
+    position: relative;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+.container header{
+    position: absolute;
+    top: 0;left: 0;right: 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
+    padding: 1.2rem 2rem;
+    margin: 1rem 0;
 }
-.nav-bar{
-    margin-left: 50px;
+.container header .logo{
+    max-width: 100%;
 }
-.nav-list{
+.container header .nav{
     display: flex;
-    gap: 25px;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
 }
-.nav-link,.dropdown-link{
-    color:rgb(105, 105, 105);
-    background-color: none;
-    font-size: 14px;
+.container header .nav .close-icon{
+    display: none;
 }
-
-.arrow1:hover{
-    cursor: pointer;
-}
-.nav-link:hover, .nav-link:active,.nav-button:hover,.arrow-down:hover,.arrow-down:active{
-    color: hsl(0, 0%, 8%);
-    cursor: pointer;
-}
-.nav-right{
+.container header .nav .nav-bar{
+    margin: 0 auto;
+    padding: 0 7rem;
+    flex: 1;
     display: flex;
-    flex-grow: 1;
-    justify-content: end;
+    gap: 3rem;
 }
-.nav-button{
-    padding: 5px;
-    border-radius: 8px;
-    border-style: none;
+.container header .nav .nav-bar a{
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+.container header .nav .nav-bar a:hover{
+    color: var(--black);
+}
+.container header .nav .header-btns{
+    margin: 0 auto;
+    display: flex;
+}
+button{
     text-align: center;
+    padding: .6rem  1.2rem;
+    border: 1.5px solid var(--main-color);
+    border-radius: 8px;
     background-color: transparent;
-    color:#696969;
-    margin-left: 20px;
+    margin-left: 1.4rem;
+    font-size: 1rem;
+    color: var(--main-color);
 }
-.nav-button:last-child{
-    border: 1.5px solid hsl(0, 0%, 41%);
+button:hover{
+    color: var(--black);
+    border-color: var(--black);
+    cursor: pointer;
 }
-.nav-button:last-child:hover{
-    border-color:hsl(0, 0%, 8%) ;
+.container header .nav .header-btns .login{
+    border: none;
 }
-
-/* dropdown menu */
-
-.dropdown{
+.container header .nav .nav-bar .dropdown{
     position: relative;
 }
-.dropdown-menu{
-    position: absolute;
-    right: 10px;
-    width: 120px;
-    padding: 8px 12px;
-    margin-top: 20px;
-    box-shadow: 3px 2px 7px hsl(0, 0%, 41%);
-    border-radius: 8px;
-    background-color: white;
+.dropdown .nav-link{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
 }
-.dropdown-menu-company,.dropdown-menu-features{
+.dropdown .dropdown-menu{
     display: none;
-   
+    position: absolute;
+    top: 100%;right:0;
+    margin-top: 1rem;
+    padding: .5rem 1rem ;
+    border-radius: 5px;
+    box-shadow: .5px 1px 2px var(--main-color) ;
 }
-.dropdown-item{
+.dropdown-menu .dropdown-list .dropdown-item{
+    margin: 1rem 0;
     display: flex;
-    margin: 12px 0px;
+    align-items: center;
+    gap: .8rem;
 }
-.dropdown-item img{
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+.dropdown-menu .dropdown-list .dropdown-item a{
+    font-size: .9rem;
 }
-.dropdown-menu-company{
-    width: 90px;
-    right: 0;
+.container header .menu-icon{
+    display: none;
+    max-width: 100%;
 }
 
-/* main body */
-
-.main-body{
+.container .main{
     display: flex;
-    margin:0px 60px;
+    margin:7rem;
+    min-height: 70vh;
+    background-color: red;
+    background: url(images/image-hero-desktop.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
 }
-.content{
-    flex: 2;
-    align-self: center;
-    margin-left: 80px;
-    margin-top: 100px;
+.container .main .content{
+    position: relative;
+    flex-basis: 65%;
+    padding:2rem 1.5rem;
 }
-.content-heading{
-    font-size: 3rem;
+.container .main .content h1{
+    width: 52%;
+    font-size: 4rem;
     font-weight: 700;
-    padding-bottom: 40px;
-    padding-right: 190px;
-    color: black;
+    color: var(--black);
+    text-transform:none; 
+    padding-bottom: 2rem;
 }
-.content-paragraph{
-    color:#696969 ;
-    font-size: 18px;
-    line-height: 1.5rem;
-    padding-bottom: 40px;
+.container .main .content p{
+    font-size: 1.1rem;
+    width:63%;
+    line-height: 1.7rem;
+    text-transform:none; 
+    color: var(--main-color);
+    padding-bottom: 2rem;
 }
-.main-body-image{
-    display: flex;
-    justify-content: end;
-    flex: 2;
-    margin-top: 40px;
-}
-.content-button{
-    width: 100px;
-    border-radius: 8px;
-    border-style: none;
-    text-align: center;
-    background-color: hsl(0, 0%, 8%) ;
-    border: 1.2px solid #696969;
-    padding: 8px;
-    color:white;
+.container .main .content .content-btn{
+    padding: 1rem  1.4rem;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    font-size: 1rem;
     font-weight: 700;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    text-transform: none;
 }
-.content-button:hover, .content-button:active{
+.container .main .content .content-btn:hover{
     background-color: transparent;
-    color:hsl(0, 0%, 8%) ;
-    cursor: pointer;
+    border: 1.5px solid var(--main-color);
+    color: var(--black);
 }
-.sponsors{
-    margin-top: 50px;
+.container .main .content .brands{
+    position: absolute;
+    bottom: 0;
+    align-self: flex-end;
+    display: flex;
+    gap:3rem;
 }
-.logo{
-    margin-right: 20px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:980px){
+    html{
+        font-size:60% ;
+    }
+    
+    
+}
+@media (max-width:400px) {
+    html{
+        font-size:50% ;
+    }
+    .container{
+        width: 100%;
+        margin:1rem 0;
+        padding: 1.2rem 0;
+        position: relative;
+    }
+    .container header .logo{
+        width: 70px;
+        height: 30px;
+    }
+    .container header .nav{
+        display: none;
+        position: fixed;
+        top: 0;right: 0;
+        width: 50%;height: 100%;
+        padding: 1.5rem;
+        background-color: var(--white);
+        z-index: 1000;
+    }
+    .container header .nav.active{
+        display: block;
+    }
+    .container header .nav .close-icon{
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+    }
+    .container header .nav .nav-bar{
+        padding: 1.4rem 0;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    .container header .nav .nav-bar a{
+        display: block;
+        font-size: 2rem;
+        padding:1.4rem 0 ;
+    }
+    .container header .nav .header-btns{
+        display: block;
+    }
+    .container header .nav .header-btns button {
+        padding: .6rem  1.2rem;
+        margin: auto;
+        margin-bottom: 1.4rem;
+        width: 100%;
+        font-size: 1.8rem;
+        color: var(--main-color);
+    }
+    .container header .nav .nav-bar .dropdown{
+        display: block;
+    }
+    .dropdown .dropdown-menu{
+        position: relative;
+        width: 100%;
+        top: auto;right: auto;
+        padding: 0 2rem ;
+        box-shadow:none;
+    }
+    .dropdown-menu .dropdown-list .dropdown-item{
+        margin: .3rem 0;
+    }
+    .container header .menu-icon{
+        display: block;
+    }
+    .container .main{
+        margin:7rem 0;
+        background-color: red;
+        width: 100%;height: 100%;
+        background: url(images/image-hero-mobile.png);
+        background-size:contain ;
+        background-repeat: no-repeat;
+        background-position-y:top ;
+    }
+    .container .main .content{
+        flex-basis: auto;
+        align-self: end;
+        text-align: center;
+        margin-top: 35rem;
+    }
+    .container .main .content h1{
+        width: 100%;
+    }
+    .container .main .content p{
+        font-size: 2rem;
+        width:100%;
+        line-height: 2.5rem;
+        padding-bottom: 3rem;
+    }
+    .container .main .content .content-btn{
+        margin-bottom: 3rem;
+    }
+    .container .main .content .brands{
+        justify-content: space-between;
+    }
 }

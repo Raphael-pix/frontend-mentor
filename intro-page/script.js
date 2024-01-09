@@ -1,17 +1,11 @@
-const arrow = document.querySelector(".arrow1");
-console.log(arrow);
-const dropdown = document.querySelector(".dropdown-menu-features")
-console.log(dropdown);
+const nav = document.querySelector(".nav");
+const menu = document.querySelector(".menu-icon")
+const close = document.querySelector(".close-icon")
+console.log(close);
 
-
-
- let isVisible = false;
- arrow.addEventListener("click", ()=>{
-  if (isVisible){
-    dropdown.style.display = "none";
-  }else{
-    dropdown.style.display = "block";
-  }
-  isVisible = !isVisible;
-  console.log(isVisible)
+menu.addEventListener("click", ()=>{
+  nav.classList.add="active"
+})
+close.addEventListener("click", ()=>{
+  nav.classList.remove="active"
  })

@@ -3,115 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Snap - dropdown Menu</title>
 </head>
 <body>
+
     <div class="container">
-        <div class="top-bar">
-            
-            <img src="images/logo.svg" alt="logo" width="60px" height="30px">
-            
-            <div class="nav-bar">
-                <ul class="nav-list">
+
+        <header class="header">
+            <img src="images/logo.svg" alt="logo" width="50px" height="20px" class="logo">
+
+            <div class="nav">
+                <div class="close-icon">
+                    <img src="images/icon-close-menu.svg" alt="menu-icon"  width="24px" height="18px">
+                </div>
+                <nav class="nav-bar">
                     <div class="dropdown">
-                        <li class="nav-item">
-                            <a href="" class=" nav-link">Features</a>
-                                <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow1">
-                                <img src="images/icon-arrow-up.svg" alt="arrow-up" class="arrow2">
-                                <div class="dropdown-menu-features">
-                                    <ul class="dropdown-menu">   
-                                        <li class="dropdown-item">
-                                            <img src="images/icon-todo.svg" alt="todo">
-                                            <a href="" class="dropdown-link">Todo List</a>
-                                        </li>
-
-                                        <li class="dropdown-item">
-                                            <img src="images/icon-calendar.svg" alt="calender">
-                                            <a href="" class="dropdown-link">Calender</a>
-                                        </li>
-
-                                        <li class="dropdown-item">
-                                            <img src="images/icon-reminders.svg" alt="reminder">
-                                            <a href="" class="dropdown-link">reminders</a>
-                                        </li>
-
-                                        <li class="dropdown-item">
-                                            <img src="images/icon-planning.svg" alt="planning">
-                                            <a href="" class="dropdown-link">Planning</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </li>
+                        <div class="nav-link">
+                            <a href="">features</a>
+                            <img src="images/icon-arrow-down.svg" width="10px" height="6px" class="dropdown-img">
+                        </div>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item">
+                                    <img src="images/icon-todo.svg" alt="todo" width="13px" height="13px">
+                                    <a href="">todo list</a>
+                                </li>
+                                <li  class="dropdown-item">
+                                    <img src="images/icon-calendar.svg" alt="calender"width="13px" height="13px">
+                                    <a href="">calender</a>
+                                </li>
+                                <li  class="dropdown-item">
+                                    <img src="images/icon-reminders.svg" alt="reminders" width="13px" height="13px">
+                                    <a href="">reminders</a>
+                                </li>
+                                <li  class="dropdown-item">
+                                    <img src="images/icon-planning.svg" alt="planning" width="13px" height="13px">
+                                    <a href="">planning</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    
+
                     <div class="dropdown">
-                    <li class="nav-item">
-                        <a href=""  class=" nav-link">Company</a>
-                            <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow">
-                            <img src="images/icon-arrow-up.svg" alt="arrow-up" class="arrow">
-                           
-                            <div class="dropdown-menu-company">
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-item">
-                                        <a href="" class="dropdown-link">History</a>
-                                    </li>
-                                    <li class="dropdown-item">
-                                        <a href="" class="dropdown-link">Our Team</a>
-                                    </li>
-                                    <li class="dropdown-item">
-                                        <a href="" class="dropdown-link">Blog</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="nav-link">
+                            <a href="">company</a>
+                            <img src="images/icon-arrow-down.svg"  width="10px" height="6px" class="dropdown-img">
+                        </div>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list">
+                                <li  class="dropdown-item">
+                                    <a href="">History</a>
+                                </li>
+                                <li  class="dropdown-item">
+                                    <a href="">our team</a>
+                                </li>
+                                <li  class="dropdown-item">
+                                    <a href="">blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="">careers</a>
+                    <a href="">about</a>
+                </nav>
 
-                    </li>
-                    
-
+                <div class="header-btns">
+                    <button class="login">login</button><br>
+                    <button class="register">register</button>
                 </div>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">Careers</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a href="" class="nav-link">About</a>
-                    </li>
-                </ul>
-            
-            
             </div>
-        
-            <div class=" nav-right">
-                <button class="nav-button">Login</button>
-                <button class="nav-button">Register</button>
+
+            <div class="menu-icon">
+                <img src="images/icon-menu.svg" alt="menu-icon" class="menu-icon"  width="32px" height="18px">
             </div>
-        
-        </div>
-        <!-- main body -->
-        <div class="main-body">
+        </header>
+
+        <section class="main">
             <div class="content">
-                <h1 class="content-heading">Make remote work</h1>
-                <p class="content-paragraph">Get your team in sync, no matter your location. Streamline Processes, create team rituals, and watch productivity soar</p>
-                <button class="content-button">Learn more</button>
-                <div class="sponsors">
-                    <img src="images/client-databiz.svg" alt="databiz" class="logo">
-                    <img src="images/client-audiophile.svg" alt="audiophile" class="logo">
-                    <img src="images/client-meet.svg" alt="meet" class="logo">
-                    <img src="images/client-maker.svg" alt="marker" class="logo">
+                <h1>Make remote work</h1>
+                <p>Get your team in sync, no matter your location. Streamline services, create team rituals, and watch productivity soar.</p>
+                <button class="content-btn">Learn more</button>
+
+                <div class="brands">
+                    <img src="images/client-databiz.svg" alt="" width="65px" height="25px">
+                    <img src="images/client-audiophile.svg" alt="" width="65px" height="25px">
+                    <img src="images/client-meet.svg" alt="" width="65px" height="25px">
+                    <img src="images/client-maker.svg" alt="" width="65px" height="25px">
                 </div>
             </div>
-           
-            <div class="main-body-image">
-            <img src="images/image-hero-desktop.png" alt="image" height="450px" width="350px">
-           </div>
-
-        </div>
-
+        </section>
 
     </div>
+
+
+
 
 <script src="script.js" defer></script>
 </body>
