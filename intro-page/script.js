@@ -22,3 +22,7 @@ window.onclick = function(event) {
     }
   }
 }
+
+function toggleNavMenu() {
+  nav.classList.toggle("responsive");
+}
