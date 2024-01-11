@@ -2,7 +2,7 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 body{
     min-height: 100vh;
@@ -15,40 +15,57 @@ body{
     align-items: center;
 }
 .container{
-    width: 600px;
-    padding: 10px 15px;
+    padding: 1rem;
     background-color: white;
     border-radius: 10px;
+}
+.container .content{
     display: flex;
+    background: url(images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
-div.content{
-    margin: 5px 10px;  
-    width: 80%;
+.content .main{
+    flex-basis: 55%;
+    margin-right:15rem;
 }
-.content h3{
+.content .main h3{
     font-size: 2rem;
     margin-bottom: 20px;
 }
-.points{
-    margin:20px 0px;
+.content .main p{
+    margin:.5rem 0;
 }
-.checklist{
-    line-height: 25px;
+.content .main .points{
+    margin:2rem 0;
+}
+.points .checklist{
+    line-height: 1.2rem;
 }
 .checklist img{
     margin-right: 10px;
 }
-.form{
+.content .main .form{
     display: flex;
     flex-direction: column;
-    font-size:13px;
+    font-size:.7rem;
 }
 .form label{
     font-weight: 700;
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+.form label .error{
+    display: none;
+    position: absolute;
+    right: 0;
+    color: #ff6257;
 }
 .form input{
     height: 40px;
-    padding-left: 20px;
+    padding-left: 1.2rem;
     margin: 7px 0px;
     cursor: pointer;
     border-radius: 7px;
@@ -60,7 +77,7 @@ div.content{
     border-color: black;
 }
 
-#subscribe{
+.form #subscribe{
     background-color: #242537;
     color: white;
     border-radius: 5px;
@@ -72,36 +89,33 @@ div.content{
     cursor: pointer;
     text-decoration: none;
 }
-#subscribe:active{
+.form #subscribe:active,.form #subscribe:hover{
     background:linear-gradient(to right, #ff6257,#ff7700);
 }
-.image{
-    width: 45%;
-    min-height: 300px;
-    margin: 5px 0px;
-    border-radius: 15px;
-    position: relative;
-    background: url(images/illustration-sign-up-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 @media screen and (max-width:500px){
+    body{
+        display: block;
+    }
     .container{
-        width: 100%;
-        height: 100%;
+        width: 100%;min-height: 100vh;
+        padding: 0;
+        border-radius: 0px;
+    }
+    .container .content{
         display: flex;
-        flex-direction: column-reverse;
-        position: absolute;
-    }
-    .content{
-        padding-left: 20px;
-    }
-    .image{
-        bottom: 0%;
-        margin-bottom: 20px;
-        width: 100%;
+        min-height: inherit;
         background: url(images/illustration-sign-up-mobile.svg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-position: top;
     }
+    .content .main{
+        font-size: 1.2rem;
+        flex-basis: 100%;
+        margin-right:0;
+        align-self: end;
+        margin-bottom: 5rem;
+        padding: 0 2rem;
+    }
+
 }
