@@ -58,7 +58,6 @@ body{
     flex: 1;
 }
 .form label .error{
-    display: none;
     position: absolute;
     right: 0;
     color: #ff6257;

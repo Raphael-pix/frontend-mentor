@@ -1,19 +1,28 @@
+const form = document.getElementById("form")
 function validate() {
-    var emailInput = document.forms["emailForm"]["email"].value;
-    var errorElement = document.querySelector(".error");
+    let emailInput = document.getElementById("email")
+    let errorElement = document.querySelector(".error");
   
-    // Regular expression to check email format
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   
-    if (!emailInput.match(emailPattern)) {
-      errorElement.textContent = "Invalid email format";
-      return false; // Prevent form submission
+    if (!emailInput.value.match(emailPattern)) {
+      errorElement.textContent = "valid email required";
+      emailInput.setAttribute("style","background-color:#ff625756;;border:1px solid #ff6257;")
+      return false; 
     }
   
-    errorElement.textContent = ""; // Clear error message
-    return true; // Allow form submission
+    errorElement.textContent = ""; 
+    emailInput.setAttribute("style","background-color:white;;border: 1px solid rgb(128, 128, 128);")
+    window.location.href = "success.html";
+    return true;
   }
-  
-  // Attach the validate function to the form's onsubmit event
-  document.forms["emailForm"].onsubmit = validate;
-  
+  document.addEventListener("DOMContentLoaded", function() {
+    form.addEventListener("submit", function(e){
+      validate()
+      e.preventDefault()
+    })
+  });
+
+  function dismiss(){
+    window.location.href = "index.html";
+  }
