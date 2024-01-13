@@ -76,7 +76,7 @@ body{
     border-color: black;
 }
 
-.form #subscribe{
+button,#subscribe{
     background-color: #242537;
     color: white;
     border-radius: 5px;
@@ -88,9 +88,36 @@ body{
     cursor: pointer;
     text-decoration: none;
 }
-.form #subscribe:active,.form #subscribe:hover{
+button:active,button:hover,#subscribe:active,#subscribe:hover{
     background:linear-gradient(to right, #ff6257,#ff7700);
 }
+
+/* success page */
+.success{
+    padding: 2rem 3rem;
+    margin: 0 50%;
+    border-radius: 25px;
+}
+.success-content{
+    font-size: .7rem;
+    margin:1rem 0;
+    line-height: 1rem;
+}
+.success h2{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 1rem 0;
+}
+.success-content p{
+    margin-bottom: 1rem
+}
+
+
+
+
+
+
 @media screen and (max-width:500px){
     body{
         display: block;
@@ -109,12 +136,17 @@ body{
         background-position: top;
     }
     .content .main{
-        font-size: 1.2rem;
+        font-size: .8rem;
         flex-basis: 100%;
         margin-right:0;
         align-self: end;
-        margin-bottom: 5rem;
+        margin: 1rem 0;
         padding: 0 2rem;
     }
-
+    .success{
+        width: 100%;
+        margin: auto;
+        padding: 2rem 3rem;
+        align-self: center;
+     }
 }
