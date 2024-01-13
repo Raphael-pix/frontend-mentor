@@ -7,7 +7,7 @@ const product = document.querySelector(".product")
 const close = document.querySelector(".close")
 const cart = document.querySelector(".cart-top")
 const cartcontent = document.querySelector(".cart-body");
-const cartCount = document.querySelector(".count");
+const cartCount = document.getElementsByClassName("count");
 const plus = document.querySelector(".plus");
 const minus = document.querySelector(".minus");
 const addCart=document.querySelector(".addToCart");
@@ -74,14 +74,14 @@ function showSlides(n) {
  let count = 0;
  function increasreCount(){
   count ++;
-  cartCount.textContent = count;
+  cartCount.value = count;
   console.log(count)
  }
  function decreasreCount(){
   if (count >= 1){
     count --;
-  cartCount.textContent = count;
-  console.log(count)
+    cartCount.value = count;
+    console.log(cartCount.value)
   }
  }
 
@@ -96,8 +96,6 @@ function showSlides(n) {
 
   holder.style.display = "block"
   emptyCartText.style.display="none";
-
-  
 
  })
 
