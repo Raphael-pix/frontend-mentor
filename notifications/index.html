@@ -3,51 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
     <title>Notifications Page</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h3 > Notifications<span>3</span></h3>
-            <a href="/">Mark all as read</a>
+            <button onclick="toggleUnread()">Mark all as read</button>
         </div>
-        <div class="notification">
+        <div class="notification unread">
             <figure>
             <img src="images/avatar-mark-webber.webp" alt="avatar" width="50px" height="50px" class="avatar"> 
             <figcaption>
-                <p><a href="/" class="name">Mark Webber</a> reacted to your recent post <a href="/" class="post">My first tournament today!</a><span class="unread"></span></p>
+                <p><a href="" class="name">Mark Webber</a> reacted to your recent post <a href="" class="post">My first tournament today!</a><span class="unread-icon"></span></p>
                 <p class="time">1m ago</p>
             </figcaption>
             </figure>
         </div>
         
-        <div class="notification">
+        <div class="notification unread">
             <figure>
             <img src="images/avatar-angela-gray.webp" alt="avatar" width="50px" height="50px" class="avatar"> 
             <figcaption>
-                <p><a href="/" class="name">Angela Gray</a> followed you <span class="unread"></span> </p>
+                <p><a href="" class="name">Angela Gray</a> followed you <span class="unread-icon"></span> </p>
                 <p class="time">5m ago</p>
             </figcaption>
             </figure>
         </div>
 
-        <div class="notification">
+        <div class="notification unread">
             <figure>
             <img src="images/avatar-jacob-thompson.webp" alt="avatar" width="50px" 
         height="50px" class="avatar"> 
             <figcaption>
-                <p><a href="/" class="name">Jacob Thompson</a> has joined your group <a href="/" class="post">Chess Club</a> <span class="unread"></span></p>
+                <p><a href="" class="name">Jacob Thompson</a> has joined your group <a href="" class="post">Chess Club</a> <span class="unread-icon"></span></p>
                 <p class="time">1 day ago</p>
             </figcaption>
             </figure>
         </div>
 
-        <div class="notification">
+        <div class="notification read">
             <figure>
             <img src="images/avatar-rizky-hasanuddin.webp" alt="avatar" width="50px" height="50px" class="avatar"> 
             <figcaption>
-                <p><a href="/" class="name">Rizky Hasanuddin</a> sent you a private message</p>
+                <p><a href="" class="name">Rizky Hasanuddin</a> sent you a private message</p>
                 <p class="time">5 days ago</p>
             </figcaption>
             </figure>
@@ -56,37 +57,37 @@
             </div>
         </div>
 
-        <div class="notification">
+        <div class="notification read">
             <figure>
             <img src="images/avatar-kimberly-smith.webp" alt="avatar" width="50px" height="50px" class="avatar"> 
             <figcaption>
-                <p><a href="/" class="name">Kimberly Smith</a> commented on your picture</p>
+                <p><a href="" class="name">Kimberly Smith</a> commented on your picture</p>
                 <p class="time">1 week ago</p>
             </figcaption>
             </figure>
             <img src="images/image-chess.webp" alt="picture" width="50px" height="50px" class="picture"> 
         </div>
 
-        <div class="notification">
+        <div class="notification read">
             <figure>
             <img src="images/avatar-nathan-peterson.webp" alt="avatar" width="50px" height="50px" class="avatar"> 
             <figcaption>
-                <p><a href="/" class="name">Nathan Peterson</a> reacted to your recent post <a href="/" class="post">5 end-game strategies tp increase your win rate</a></p>
+                <p><a href="" class="name">Nathan Peterson</a> reacted to your recent post <a href="" class="post">5 end-game strategies tp increase your win rate</a></p>
                 <p class="time">2 weeks ago</p>
             </figcaption>
             </figure>
         </div>
 
-        <div class="notification">
+        <div class="notification read">
             <figure>
             <img src="images/avatar-anna-kim.webp" alt="avatar" width="50px" height="50px" class="avatar"> 
             <figcaption>
-                <p><a href="/" class="name">Ann Kim</a> left the group<a href="/" class="post"> Chess Club</a></p>
+                <p><a href="" class="name">Ann Kim</a> left the group<a href="" class="post"> Chess Club</a></p>
                 <p class="time">2 weeks ago</p>
             </figcaption>
             </figure>
         </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>

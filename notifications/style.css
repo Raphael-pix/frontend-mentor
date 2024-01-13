@@ -24,7 +24,7 @@ a:hover{
 }
 .container{
     height: 100%;
-    width: 600px;
+    max-width: 600px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -46,13 +46,15 @@ h3 span{
     color: white;
     text-align: center;
 }
-.header a{
+.header button{
     position: absolute;
     right: 0px;
     color: hsl(219, 14%, 63%);
     font-weight: 500;
+    border: none;
+    background-color: transparent;
 }
-.header a:hover{
+.header button:hover{
     color: blue;
 }
 .notification{
@@ -63,7 +65,10 @@ h3 span{
     flex-direction: column;
     position: relative;
 }
-.notification:nth-child(2),.notification:nth-child(3),.notification:nth-child(4){
+.notification.read{
+    background-color: white;
+}
+.notification.unread{
     background-color: hsl(210, 60%, 98%);
 }
 .notification:nth-child(6){
@@ -81,7 +86,7 @@ h3 span{
 p.time{
     padding-top: 5px;
 }
-.unread{
+.unread-icon{
     display: inline-block;
     width: 7px;
     height: 7px;
