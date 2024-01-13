@@ -1,22 +1,18 @@
-const container = document.querySelector(".container");
 const mainImage = document.querySelector(".main img");
-const images = document.querySelector(".product-images")
 const main= document.querySelector("body")
 const lightbox = document.querySelector(".box")
 const product = document.querySelector(".product")
 const close = document.querySelector(".close")
 const cart = document.querySelector(".cart-top")
 const cartcontent = document.querySelector(".cart-body");
-const cartCount = document.getElementsByClassName("count");
-const plus = document.querySelector(".plus");
-const minus = document.querySelector(".minus");
-const addCart=document.querySelector(".addToCart");
+const cartCount = document.getElementById("count");
+const addCart=document.querySelector(".cart-button");
 const amount = document.querySelector(".cartAmount")
 const totalPrice = document.querySelector(".placeholder")
 const holder = document.querySelector(".holder")
 const emptyCartText = document.querySelector(".emptyCart")
 const deleteEl = document.querySelector(".delete");
-const otherImages = document.getElementsByClassName("others-images");
+const notification = document.querySelector(".notification");
 
 function addLightBox(){
   lightbox.classList.add("lightbox")
@@ -71,35 +67,36 @@ function showSlides(n) {
   isVisible = !isVisible;
  })
 
- let count = 0;
+ let count = cartCount.value;
  function increasreCount(){
   count ++;
-  cartCount.value = count;
-  console.log(count)
+  cartCount.value = count
  }
  function decreasreCount(){
   if (count >= 1){
     count --;
-    cartCount.value = count;
-    console.log(cartCount.value)
+    cartCount.value = count
   }
  }
 
  let price = 125
  addCart.addEventListener("click",()=>{
-  cartCount.textContent = 0
+  notification.innerHTML = count
   amount.textContent = count
   price *= count;
   count = 0;
   totalPrice.textContent = price;
   price = 125
 
+  notification.style.display ="block"
   holder.style.display = "block"
   emptyCartText.style.display="none";
 
+ cartCount.value = 0
  })
 
  deleteEl.addEventListener("click", ()=>{
   holder.style.display = "none"
   emptyCartText.style.display="block"
+  notification.style.display ="none"
  })
