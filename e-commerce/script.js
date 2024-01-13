@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const mainImage = document.querySelector(".main > img");
+const mainImage = document.querySelector(".main img");
 const images = document.querySelector(".product-images")
 const main= document.querySelector("body")
 const lightbox = document.querySelector(".box")
@@ -16,21 +16,26 @@ const totalPrice = document.querySelector(".placeholder")
 const holder = document.querySelector(".holder")
 const emptyCartText = document.querySelector(".emptyCart")
 const deleteEl = document.querySelector(".delete");
+const otherImages = document.getElementsByClassName("others-images");
 
-mainImage.addEventListener("click", ()=>{
-    lightbox.classList.add("lightbox")
-    product.setAttribute("style", "opacity: 0.6; ");
-})
+function addLightBox(){
+  lightbox.classList.add("lightbox")
+  product.setAttribute("style", "opacity: 0.3; ");
+}
 
-close.addEventListener("click", ()=>{
-    lightbox.classList.remove("lightbox");
-    product.style.cssText= "opacity: 1";
-}) 
+function removeLightBox(){
+  lightbox.classList.remove("lightbox");
+  product.style.cssText= "opacity: 1";
+}
+
+mainImage.addEventListener("click", addLightBox)
+close.addEventListener("click" , removeLightBox)
 main.addEventListener('click', (e) => {
     if (e.target === main) {
-      lightbox.style.display = 'none';
+      removeLightBox();
     }
   });
+
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -42,13 +47,19 @@ function plusSlides(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("main-img");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+
 
  let isVisible = false;
  cart.addEventListener("click", ()=>{
