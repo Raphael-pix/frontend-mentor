@@ -8,9 +8,10 @@
 }
 body{
     min-height: 100vh;
+    overflow-x:hidden ;
     font-family: 'Kumbh Sans', sans-serif;
-    padding: 30px 100px;
-    font-size: 1.4rem;
+    padding: 2rem 7rem;
+    font-size: 1.5rem;
     position: relative;
 }
 span{
@@ -32,28 +33,34 @@ button{
 /*top navigation bar*/
 
 .container{
-    font-size: 60%;
-    max-width: 72vw;
-    margin: 0 5rem;
+    font-size: 62%;
+    max-width: 100%;
     position: relative;
 }
 .container .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.7rem;
+    gap: 1rem;
     padding-bottom: 2.2rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid #8080809a;   
     position: relative;
 }
+.container .navbar .menu-icon{
+    align-self: end;
+    display: none;
+}
 .container .navbar .menu{
     flex: 1;
+    margin: 0 1rem ;
 }
 .container .navbar .menu ul{
     display: flex;
     gap:1.8rem;
     text-transform: capitalize;
+}.container .navbar .menu ul .close-icon{
+    display: none;
 }
 .navbar .menu ul .menu-links{
     color: grey;
@@ -93,7 +100,7 @@ button{
 }
 .navbar .right .cart-body{
     position: absolute;
-    bottom: -170px;
+    top: 100%;
     left: -250px;
     width: 300px;
     height: 190px;
@@ -124,6 +131,9 @@ button{
 .cart-content .holder .cart-product{
     display: flex;
     align-items: center;
+}
+.cart-content .holder .cart-product .delete{
+    cursor: pointer;
 }
 .cart-product .cart-image{
     border-radius: 4px;
@@ -160,8 +170,13 @@ button{
 .product .product-images{
     margin-right: 3.2rem;
 }
-.product-images .main img,.lightbox img{
-    /* width: 100%; */
+.product-images .main img{
+    width: 100%;
+    max-width: 400px;height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.lightbox img{
     border-radius: 10px;
     cursor: pointer;
 }
@@ -169,17 +184,17 @@ button{
     margin-top: .7rem;
     display: flex;
     justify-content:space-between;
-    width: 100%;
+    gap: .5rem;
 }
 .product-images .others .others-images,.lightbox-others .lightbox-images{
     border-radius: 5px;
     width: 70px;
-    height: 60px;
+    height: 70px;
 }
 .others-images img,.lightbox-others .lightbox-images img{
     border-radius: 4px;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .others-images.active,.lightbox-others .active{
@@ -241,7 +256,7 @@ button{
 
 .product .product-details .cart{
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
 }
 
 /* start of counter */
@@ -254,7 +269,7 @@ button{
     align-items: center;
 }
 .cart .counter .count{
-    width: 70px;
+    max-width: 70px;
     background-color: transparent;
     text-align: center;
     font-weight: 700;
@@ -280,7 +295,8 @@ start of add to cart */
     background-color: #ff7d1a;
     border-radius: 5px;
     font-size: 12px;
-    width: 250px;
+    max-width: 250px;min-width: 135px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,7 +317,6 @@ start of add to cart */
 
 /* light-box */
 .box{
-    display: none;
     visibility: hidden;
     display: flex;
     justify-content: center;
@@ -341,4 +356,154 @@ start of add to cart */
 }
 .lightbox-others {
     border-radius: 5px
+}
+
+
+@media (max-width:980px){
+    body{
+        padding: 1.5rem 0;
+    }
+    .container{
+        font-size: 57%;
+    }
+    .container .navbar .menu ul{
+        gap:1rem;
+    }
+    .product{
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+    .product .product-images{
+        margin-right: 2rem;
+    }
+    .product .product-details{
+        padding: 1.5rem 1.8rem;
+    }
+    .product-details h1{
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+    .cart-button{
+        font-size: 12px;
+        width: 70%;
+    }
+}
+@media (max-width:730px){
+    body{
+        padding: 1.2rem 0;
+    }
+    .container .navbar {
+        margin-bottom: 0;
+        margin: 0 1rem;
+    }
+    .container .navbar .menu ul{
+        display:  none;
+        flex-direction: column;
+        position: fixed;
+        left: 0;top: 0;
+        margin: 0;
+        min-height:100%; width: 50%;
+        background-color: white;
+        z-index: 1000;
+        padding: 1.4rem ;
+    }
+    .container .navbar .menu ul.visible{
+        display: block;
+    }
+    .container .navbar .menu ul .close-icon{
+        display: block;
+        margin-bottom: 2rem;
+    }
+    .container .navbar .menu ul .menu-items{
+        margin: 1.4rem 0;
+    }
+    .container .navbar .menu ul .menu-links{
+        font-size: 1.1rem;
+        padding-bottom: 0;
+        font-weight: 700;
+        color: hsl(220, 13%, 13%);
+    }
+    .container .navbar .menu-icon{
+        display: block;
+    }
+   
+}
+
+@media (max-width:620px){
+    body{
+        padding: 1rem 0;
+    }
+    .container{
+        font-size: 55%;
+    }
+    .container .navbar .logo img{
+        width: 100px;height: 25px;
+    }
+    .product{
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .product .product-images{
+        margin-right: 0;
+    }
+    .product-images .main img{
+        max-width: 100%;height: 300px;
+        object-fit: cover;
+        border-radius: 0;
+    }
+    .product-images .others{
+        display: none;
+    }
+    .product-details h4{
+        font-size: 15px;
+    }
+    .product-details h1{
+        font-size: 2rem;
+    }
+    .product-details .description{
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+    .product-details .price{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .price h3{
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .price h3 span{
+        font-size: 1rem;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+    .price p{
+        flex: 1;
+        position: absolute;
+        right: 0;
+    }
+    .product .product-details .cart{
+        display: block;
+    }
+    .product-details .cart .counter{
+        width: 100%;
+    }
+    .product-details .cart .counter .counter-element{
+        flex:33.33%;
+    }
+    .navbar .right .profile-pic{
+        width: 35px;
+        height: 35px;
+    }
+    .cart .counter .count{
+        max-width: 100%;
+    }
+    .cart-button{
+        max-width: 100%;min-width: 135px;
+        width: 100%;height: 40px;
+        margin: 1rem 0;
+    }
 }

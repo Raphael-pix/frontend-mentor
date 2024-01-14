@@ -13,19 +13,39 @@ const holder = document.querySelector(".holder")
 const emptyCartText = document.querySelector(".emptyCart")
 const deleteEl = document.querySelector(".delete");
 const notification = document.querySelector(".notification");
+const menu = document.querySelector(".menu-icon");
+const menuList = document.querySelector(".menu-list");
+
 
 function addLightBox(){
+  const viewport = window.innerWidth
+  if(viewport < 620){
+    return
+  }
   lightbox.classList.add("lightbox")
   product.setAttribute("style", "opacity: 0.3; ");
 }
 
 function removeLightBox(){
+  const viewport = window.innerWidth
+  if(viewport < 620){
+    return
+  }
   lightbox.classList.remove("lightbox");
   product.style.cssText= "opacity: 1";
 }
 
-mainImage.addEventListener("click", addLightBox)
-close.addEventListener("click" , removeLightBox)
+function checkViewPort(){
+  const viewport = window.innerWidth
+  if (viewport < 620) {
+      return
+  }
+  mainImage.addEventListener("click", addLightBox)
+  close.addEventListener("click" , removeLightBox)
+}
+window.addEventListener('resize', checkViewPort)
+checkViewPort()
+
 main.addEventListener('click', (e) => {
     if (e.target === main) {
       removeLightBox();
@@ -100,3 +120,7 @@ function showSlides(n) {
   emptyCartText.style.display="block"
   notification.style.display ="none"
  })
+
+ function toggleMenu(){
+  menuList.classList.toggle("visible")
+ }

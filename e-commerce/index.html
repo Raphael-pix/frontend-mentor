@@ -9,11 +9,17 @@
 <body>
     <div class="container">
         <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="images/icon-menu.svg" alt="menu-icon"  width="20px" height="15px">
+            </div>
             <div class="logo">
                 <img src="images/logo.svg" alt="logo" width="100px" height="20px">
             </div>
             <div class="menu">
-                <ul>
+                <ul class="menu-list">
+                    <div class="close-icon" onclick="toggleMenu()">
+                        <img src="images/icon-close.svg" alt="close-icon" class="close-icon">
+                    </div>
                     <li class="menu-items"><a href="/" class="menu-links">collections</a></li>
                     <li class="menu-items"><a href="/" class="menu-links">men</a></li>
                     <li class="menu-items"><a href="/" class="menu-links">women</a></li>
@@ -82,10 +88,15 @@
 
                 <div class="cart">
                     <div class="counter">
-                        <input type="image" src="images/icon-minus.svg" alt="decrease" class = "minus" onclick="decreasreCount()">
-                        <input type="number" class="count" id="count" min="0" value="0" disabled>
-                        <!-- <span class="count"></span> -->
-                        <input type="image" src="images/icon-plus.svg" alt="increase" class="plus" onclick="increasreCount()">
+                        <div class="counter-element">
+                            <input type="image" src="images/icon-minus.svg" alt="decrease" class = "minus" onclick="decreasreCount()">
+                        </div>
+                        <div class="counter-element">
+                            <input type="number" class="count" id="count" min="0" value="0" disabled>
+                        </div>
+                        <div class="counter-element">
+                            <input type="image" src="images/icon-plus.svg" alt="increase" class="plus" onclick="increasreCount()">
+                        </div>
                     </div>
                     <div class="cart-button">
                         <img src="images/icon-cart.svg" alt="shopping-cart" width="15px" height="15px">
