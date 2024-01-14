@@ -46,6 +46,7 @@ function checkViewPort(){
 window.addEventListener('resize', checkViewPort)
 checkViewPort()
 
+
 main.addEventListener('click', (e) => {
     if (e.target === main) {
       removeLightBox();
