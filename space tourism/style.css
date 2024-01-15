@@ -1,42 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 body{
+    min-height: 100vh;
     background: url(assets/home/background-home-desktop.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: 'Barlow Condensed', sans-serif;
     color: white;
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
 }
-.nav-menu{
-    margin: 20px 0px;
-    padding-left: 10px;
-    display: flex;
-    position: relative;
-}
-.logo{
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 50%;
-}
-.nav-items{
+
+/* start of navigation bar */
+
+header{
     display: flex;
     align-items: center;
-    list-style-type: none;
-    background-color: rgba(128, 128, 128, 0.212);
-    position: absolute;
-    right: 0%;
-    height: 50px;
-    padding-left: 50px;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: .5rem 0;
+    font-size: 62%;
+    transition: .5s linear;
+}
+header img{
+    margin: 0 2rem;
+}
+header .menu-icon{
+    display: none;
+}
+header .nav-bar{
+    display: flex;
+    gap: 2.4rem;
+    padding: 0 12rem;
+    padding-left: 5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    background-color: #d0d6f94a;
+}
+
+header .nav-bar .close-icon{
+    display: none;
+    margin: 2rem 0;
+}
+header .nav-bar a{
+    color: #FFFFFF;
     text-transform: uppercase;
-    font-size: 12px;
+    letter-spacing: 2px;
+    padding:1.7rem 0;
 }
-li a{
-    text-decoration: none;
-    color: rgba(245, 245, 245, 0.847);
-    padding-right: 20px;
+header .nav-bar a:hover{
+    border-bottom: 2px solid white ;
 }
-a b{
-    color: white;
-    padding-right:7px ;
+
+
+
+
+@media screen and (max-width:768px){
+    body{
+        background: url(assets/home/background-home-tablet.jpg);
+        padding: 0;
+    }
+    header{
+        font-size: 65%;
+        padding: 0;
+    }
+    header .nav-bar{
+        gap: 1.5rem;
+        padding: 0 2rem;
+    }
+    header .nav-bar a{
+        padding:2rem 0;
+    }
+    header .nav-bar a .list-no{
+        display: none;
+        padding-right: 4px;
+    }
+}
+
+@media screen and (max-width:375px){
+    body{
+        background: url(assets/home/background-home-mobile.jpg);
+    }
+    header{
+        font-size: 70%;
+        padding: 1rem;
+    }
+    header img{
+        margin: 0;
+    }
+    header .menu-icon{
+        display: block;
+    }
+    header .nav-bar{
+        display: none;
+        position: fixed;
+        top: 0;right: 0;
+        height: 100%;width: 70%;
+        padding: 0 2rem;
+    }
+    header .nav-bar.visible{
+        display: block;
+    }
+    header .nav-bar .close-icon{
+        display: block;
+        margin-bottom: 3rem;
+    }
+    header .nav-bar .close-icon img{
+        position: relative;
+        left: 100%;
+    }
+    header .nav-bar a{
+        display:inline-block;
+        width: 100%;
+        padding:1rem 0;
+    }
+    header .nav-bar a .list-no{
+        display: inline;
+    }
 }
