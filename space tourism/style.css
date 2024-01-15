@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400&family=Bellefair&display=swap');
 *{
     margin:0;
     padding: 0;
@@ -16,6 +16,46 @@ body{
     font-size: 1.4rem;
     padding: 1.5rem 0;
 }
+body.destination{
+    background: url(assets/destination/background-destination-desktop.jpg);
+}
+
+/* start of general styles */
+main{
+    margin-top: 7%;
+    padding:  0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+a{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+a:hover{
+    border-bottom: 2px solid white ;
+}
+.mainHeading{
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-family: "bellfair,serif";
+    color: white;
+}
+.subHeading{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.1rem;
+    font-weight: 400;
+ }
+.content{
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+/* end of general styles */
+
+
 
 /* start of navigation bar */
 
@@ -49,45 +89,21 @@ header .nav-bar .close-icon{
     margin: 2rem 0;
 }
 header .nav-bar a{
-    color: #FFFFFF;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     padding:1.7rem 0;
-}
-header .nav-bar a:hover{
-    border-bottom: 2px solid white ;
 }
 /* end of header */
 
-/* start of main */
+/* start of home page */
 
-main{
-    margin-top: 10%;
-    padding:  0 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 main .Intro{
     flex-basis:29%;
     color: #D0D6F9;
 }
 main .Intro .subHeading{
-   text-transform: uppercase;
-   letter-spacing: 4px;
-   font-size: 1.3rem;
+   margin: 0;
 }
 main .Intro .mainHeading{
-    text-transform: uppercase;
-    font-size: 6rem;
-    font-family: "bellfair,serif";
-    font-weight: 400;
     margin: .8rem 0 2.5rem 0;
-    color: white;
-}
-main .Intro .content{
-    font-size: 1rem;
-    margin: 1rem 0;
 }
 main .explore{
     border-radius: 50%;
@@ -104,11 +120,61 @@ main .explore .mainBtn{
     letter-spacing: 2px;
     color: #0B0D17;
 }
+/* end of home page */
 
+/* start of moon page */
+main .moon-intro{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+}
+main .moon-intro .subHeading{
+    align-self: start;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+main .moon-intro .subHeading b{
+    color: #d0d6f962;
+    margin-right: 1rem;
+}
+main .moon-intro img{
+    align-self: end;
+    margin: 2rem 0;
+}
 
-
-
-
+main .body{
+    flex-basis: 27%;
+}
+main .body .body-nav{
+    display: flex;
+    gap: 1.4rem;
+    padding-bottom: .8rem;
+}
+main .body .body-nav a{
+    font-size: 60%;
+}
+main .desc{
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid white;
+}
+main .body .desc .mainHeading{
+    font-size: 5rem;
+}
+ main .details{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 300;
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+ }
+ main .details h2{
+    font-size:.7rem;
+    word-spacing: 3px;
+    margin-bottom: 8px;
+    font-weight: 400;
+ }
+/* end of moon page */
 
 
 
@@ -142,6 +208,7 @@ main .explore .mainBtn{
         padding-right: 4px;
     }
     main{
+        padding:  0 2rem;
         text-align: center;
         flex-direction: column;
     }
@@ -150,16 +217,43 @@ main .explore .mainBtn{
         width: 64%;
         margin-bottom: 1rem;
     }
-    main .Intro .subHeading{
+    .subHeading{
         font-size: .9rem;
      }
-     main .Intro .mainHeading{
+     .mainHeading{
          font-size: 6.5rem;
+         font-weight: 400;
          margin:0;
      }
     main .explore{
         align-self: center;
     }
+
+    main .moon-intro{
+        flex-basis: auto;
+        width: 100%;
+    }
+    main .moon-intro img{
+        width:250px ;height:250px ;
+        align-self: center;
+    }
+    main .body{
+        flex-basis: auto;
+        text-align: center;
+    }
+    main .body .body-nav{
+        margin-left: 30%;
+    }
+    main .details{
+    justify-content: center;
+    }
+    main .details h2{
+        font-size:.9rem;
+        font-weight: 400;
+     }
+     main .details h2 p{
+        font-size: 2rem;
+     }
 }
 
 @media screen and (max-width:375px){
@@ -208,16 +302,17 @@ main .explore .mainBtn{
     main .Intro{
         width: 100%;
     }
-    main .Intro .subHeading{
+    .subHeading{
         font-size: .7rem;
      }
-     main .Intro .mainHeading{
+     .mainHeading{
          font-size: 5rem;
          margin:0;
      }
-     main .Intro .content{
+     .content{
         margin:1rem 0 2rem 0;
     }
+    
     main .explore{
         margin-top: 4rem;
     }
@@ -225,4 +320,25 @@ main .explore .mainBtn{
         padding:4rem 1.9rem;
         font-size: 1rem;
     }
+    main .moon-intro img{
+        width:200px ;height:200px ;
+        margin: .5rem 0 1rem 0;
+    }
+    main .moon-intro .subHeading{
+        align-self: center;
+    }
+    main .body .body-nav{
+        margin-left: 12%;
+    }
+    main .details{
+        flex-direction: column;
+        padding: 1.5rem 0;
+        gap: 1.7rem;
+    }
+     main .details h2{
+        font-size:.9rem;
+     }
+     main .details p{
+        font-size: 2rem;
+     }
 }
