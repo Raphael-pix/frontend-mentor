@@ -123,21 +123,21 @@ main .explore .mainBtn{
 /* end of home page */
 
 /* start of moon page */
-main .moon-intro{
+main .dest-intro{
     display: flex;
     flex-direction: column;
     flex-basis: 30%;
 }
-main .moon-intro .subHeading{
+main .dest-intro .subHeading{
     align-self: start;
     margin-bottom: 2rem;
     font-weight: 300;
 }
-main .moon-intro .subHeading b{
+main .dest-intro .subHeading b{
     color: #d0d6f962;
     margin-right: 1rem;
 }
-main .moon-intro img{
+main .dest-intro img{
     align-self: end;
     margin: 2rem 0;
 }
@@ -177,7 +177,7 @@ main .body .desc .mainHeading{
 /* end of moon page */
 
 
-
+/* start of mars page */
 
 
 
@@ -229,11 +229,11 @@ main .body .desc .mainHeading{
         align-self: center;
     }
 
-    main .moon-intro{
+    main .dest-intro{
         flex-basis: auto;
         width: 100%;
     }
-    main .moon-intro img{
+    main .dest-intro img{
         width:250px ;height:250px ;
         align-self: center;
     }
@@ -324,7 +324,7 @@ main .body .desc .mainHeading{
         width:200px ;height:200px ;
         margin: .5rem 0 1rem 0;
     }
-    main .moon-intro .subHeading{
+    main .dest-intro.subHeading{
         align-self: center;
     }
     main .body .body-nav{
