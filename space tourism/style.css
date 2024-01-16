@@ -152,6 +152,10 @@ main .body .body-nav{
 }
 main .body .body-nav a{
     font-size: 60%;
+    padding-bottom: 2px;
+}
+main .body .body-nav a.active{
+    border-bottom: 2px solid white;
 }
 main .desc{
     padding-bottom: 1.5rem;
@@ -225,7 +229,7 @@ main .body .desc .mainHeading{
          font-weight: 400;
          margin:0;
      }
-    main .explore{
+    main .explore,main .dest-intro .subHeading,main .dest-intro img{
         align-self: center;
     }
 
@@ -235,7 +239,6 @@ main .body .desc .mainHeading{
     }
     main .dest-intro img{
         width:250px ;height:250px ;
-        align-self: center;
     }
     main .body{
         flex-basis: auto;
