@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <header class="header">
-    <img src="assets/shared/logo.svg" alt="logo" width="35px" height="35px">
-    <nav class="nav-bar">
-      <div class="close-icon" onclick="toggleMenu()">
-        <img src="assets/shared/icon-close.svg" alt="close-icon" class="close-icon" width="19px" height="19px" >
-      </div>
-      <a href="index.html"><b class="list-no">00</b> home </a>
-      <a href="destination-moon.html"><b class="list-no">01</b> destination</a>
-      <a href=""><b class="list-no">02</b> crew</a>
-      <a href=""><b class="list-no">03</b> technology</a>
-    </nav>
-    <img src="assets/shared/icon-hamburger.svg" alt="menu-icon" class="menu-icon" width="24px" height="21px" onclick="toggleMenu()">
-  </header>
-  
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body >
+    <header class="header">
+      <img src="assets/shared/logo.svg" alt="logo" width="35px" height="35px" />
+      <nav class="nav-bar">
+        <div class="close-icon" onclick="toggleMenu()">
+          <img
+            src="assets/shared/icon-close.svg"
+            alt="close-icon"
+            class="close-icon"
+            width="19px"
+            height="19px"
+          />
+        </div>
+        <a href="index.html"><b class="list-no">00</b> home </a>
+        <a href="destination-moon.html"
+          ><b class="list-no">01</b> destination</a
+        >
+        <a href="crew-commander.html"><b class="list-no">02</b> crew</a>
+        <a href=""><b class="list-no">03</b> technology</a>
+      </nav>
+      <img
+        src="assets/shared/icon-hamburger.svg"
+        alt="menu-icon"
+        class="menu-icon"
+        width="24px"
+        height="21px"
+        onclick="toggleMenu()"
+      />
+    </header>
 
-  <main>
-    <section class="Intro">
-      <p class="subHeading">So, you want to travel to</p>
-      <h1 class="mainHeading">Space</h1>
-      <p class="content"> Let's face it; if you want to go to space, you might as well genuinely go to 
-        outer space and not hover kind of on the edge of it. Well sit back, and relax 
-        because we'll give you a truly out of this world experience!</p>
-    </section>
+    <main>
+      <section class="Intro">
+        <p class="subHeading">So, you want to travel to</p>
+        <h1 class="mainHeading">Space</h1>
+        <p class="content">
+          Let's face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we'll give you a truly out of this world
+          experience!
+        </p>
+      </section>
 
-    <section class="explore">
-      <button class="mainBtn">Explore</button>
-    </section>
-  </main>
+      <section class="explore">
+        <button class="mainBtn">Explore</button>
+      </section>
+    </main>
 
-  <script src="script.js" defer></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
