@@ -228,9 +228,15 @@ main .body .desc .mainHeading{
     display: flex;
     gap: .7rem;
 }
+.dots a:hover{
+    border: none;
+ }
 .crewMain .body .dots .dot{
     width: 15px;height: 15px;
     border-radius: 50%;
+    background-color: white;
+}
+.crewMain .body  .dots .dot:hover{
     background-color: #D0D6F9;
 }
 
@@ -243,6 +249,12 @@ main .body .desc .mainHeading{
     body{
         background: url(assets/home/background-home-tablet.jpg);
         padding: 0;
+    }
+    body.destination{
+        background: url(assets/destination/background-destination-tablet.jpg);
+    }
+    body.crew{
+        background: url(assets/crew/background-crew-tablet.jpg);
     }
     header{
         font-size: 65%;
@@ -324,6 +336,14 @@ main .body .desc .mainHeading{
 @media screen and (max-width:375px){
     body{
         background: url(assets/home/background-home-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    body.destination{
+        background: url(assets/destination/background-destination-mobile.jpg);
+    }
+    body.crew{
+        background: url(assets/crew/background-crew-mobile.jpg);
     }
     header{
         font-size: 70%;
@@ -341,6 +361,7 @@ main .body .desc .mainHeading{
         top: 0;right: 0;
         height: 100%;width: 70%;
         padding: 0 2rem;
+        z-index: 1000;
     }
     header .nav-bar.visible{
         display: block;
