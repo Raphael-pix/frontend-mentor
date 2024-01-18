@@ -212,10 +212,12 @@ main .body .desc .mainHeading{
     text-transform: uppercase;
     font-family: "bellfair,serif";
     font-weight: 300;
+    font-size: 1.2rem;
+    padding-bottom: .8rem;
     color: #d0d6f962;
 }
 .crewMain .body .desc .mainHeading{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 300;
 }
 .crewMain .dest-intro img{
