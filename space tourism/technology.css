@@ -22,7 +22,7 @@ body.technology{
     display: flex;
     gap: 4rem;
 }
-.explanation .numbering .number{
+.explanation .numbering a .number{
     width: 70px;height: 70px;
     border-radius: 50%;
     display: flex;
@@ -32,7 +32,10 @@ body.technology{
     color: white;
     margin-bottom: 1rem;
 }
-.numbering .number.active{
+.explanation .numbering a:hover{
+    border: none;
+}
+.numbering a .number.active{
     background-color: white; 
     color: black;
 }
@@ -47,7 +50,7 @@ body.technology{
     text-transform: uppercase;
     font-size: 1.1rem;
     color: #D0D6F9;
-    margin-bottom: 1rem;
+    margin-bottom: .8rem;
 }
 .explanation .exp .mainHead{
     font-family: "bellefair,serif";
