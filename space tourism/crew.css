@@ -1,26 +1,21 @@
-
-.crew{
+body.crew{
+    background: url(assets/crew/background-crew-desktop.jpg);
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
-.crewMain {
+.crew main{
     flex: 1;
 }
-.crewMain .body {
+.crew main .body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 4rem;
     gap: 2rem;
+    flex-basis: 50%;
 }
-.crewMain .body .subHeading{
-    align-self:start;
-}
-.crewMain .body .desc{
-    border: none;
-}
-.crewMain .body .desc .title{
+.body .desc .title{
     text-transform: uppercase;
     font-family: "bellfair,serif";
     font-weight: 300;
@@ -28,34 +23,82 @@
     padding-bottom: .8rem;
     color: #d0d6f962;
 }
-.crewMain .body .desc .mainHeading{
-    font-size: 1.7rem;
-    font-weight: 300;
+.body .desc .mainHeading{
+    font-size: 2.6rem;
+    font-weight: 100;
 }
-.crewMain .dest-intro img{
-    height: 100%;
-    margin: 0;
+.body .desc .content{
+    width: 72%;
 }
-.crewMain .body .dots{
+.body .dots{
     display: flex;
     gap: .7rem;
 }
 .dots a:hover{
     border: none;
  }
-.crewMain .body .dots .dot{
+.body .dots .dot{
     width: 15px;height: 15px;
     border-radius: 50%;
     background-color: white;
 }
-.crewMain .body  .dots .dot:hover{
+.body  .dots .dot:hover{
     background-color: #D0D6F9;
 }
+.crew main .crew-intro img{
+    height: 100%;
+    margin: 0;
+}
 @media screen and (max-width:768px){
-
+    body.crew{
+        background: url(assets/crew/background-crew-tablet.jpg);
+    }
+    .crew main .body {
+        flex-basis: auto;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+    .crew main .body .subHeading{
+        align-self: start;
+    }
+    .body .desc .title{
+        font-size: 1.4rem;
+     }
+    .body .desc .content{
+        width: 100%;
+    }
+    .body .dots .dot{
+        width: 10px;height: 10px;
+     }
 
 }
 @media screen and (max-width:375px){
-
-    
+    body.crew{
+        background: url(assets/crew/background-crew-mobile.jpg);
+    }
+    .crew main{
+        flex-flow: column-reverse;
+        position: relative;
+     }
+     .crew main .crew-intro{
+        margin: 2rem 0;
+        border-bottom: 1px solid #D0D6F9;
+     }
+     .crew main .body{
+        flex-flow: column-reverse;
+     }
+     .crew main .body .subHeading{
+        align-self: center;
+        position: absolute;
+        top: 0;
+     }
+     .body .desc .mainHeading{
+        font-size: 1.5rem;
+    }
+    .body .desc .content{
+        font-size: 1.2rem;
+    }
+    .crew main .crew-intro img{
+        width: 100%;
+    }
 }
