@@ -6,6 +6,7 @@
     text-decoration: none;
 }
 body{
+    height: 100vh;
     overflow-x: hidden;
     background: url(assets/home/background-home-desktop.jpg);
     background-size:cover;
@@ -15,19 +16,9 @@ body{
     font-size: 1.4rem;
     padding-top:1.5rem;
 }
-body.destination{
-    background: url(assets/destination/background-destination-desktop.jpg);
-}
-body.crew{
-    background: url(assets/crew/background-crew-desktop.jpg);
-}
-body.technology{
-    background: url(assets/technology/background-technology-desktop.jpg);
-}
 
 /* start of general styles */
 main{
-    height: 100vh;
     margin-top: 6%;
     padding:  0 4rem;
     display: flex;
@@ -98,8 +89,6 @@ header .nav-bar a{
 }
 /* end of header */
 
-/* start of home page */
-
 main .Intro{
     flex-basis:29%;
     color: #D0D6F9;
@@ -125,182 +114,7 @@ main .explore .mainBtn{
     letter-spacing: 2px;
     color: #0B0D17;
 }
-/* end of home page */
 
-/* start of destination page */
-main .dest-intro{
-    display: flex;
-    flex-direction: column;
-    flex-basis: 30%;
-}
-main .dest-intro .subHeading{
-    align-self: start;
-    margin-bottom: 2rem;
-    font-weight: 300;
-}
-main .dest-intro .subHeading b{
-    color: #d0d6f962;
-    margin-right: 1rem;
-}
-main .dest-intro img{
-    align-self: end;
-    margin: 2rem 0;
-}
-
-main .body{
-    flex-basis: 27%;
-}
-main .body .body-nav{
-    display: flex;
-    gap: 1.4rem;
-    padding-bottom: .8rem;
-}
-main .body .body-nav a{
-    font-size: 60%;
-    padding-bottom: 2px;
-}
-main .body .body-nav a:hover{
-    color: #d0d6f962;
-}
-main .body .body-nav a.active{
-    border-bottom: 2px solid white;
-}
-main .desc{
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid white;
-}
-main .body .desc .mainHeading{
-    font-size: 5rem;
-}
- main .details{
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 300;
-    display: flex;
-    gap: 5rem;
-    padding: 1rem 0;
-    text-transform: uppercase;
- }
- main .details h2{
-    font-size:.7rem;
-    word-spacing: 3px;
-    margin-bottom: 8px;
-    font-weight: 400;
- }
-/* end of moon page */
-
-
-/* start of crew page */
-.crew{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-.crewMain {
-    flex: 1;
-}
-.crewMain .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 4rem;
-    gap: 2rem;
-}
-.crewMain .body .subHeading{
-    align-self:start;
-}
-.crewMain .body .desc{
-    border: none;
-}
-.crewMain .body .desc .title{
-    text-transform: uppercase;
-    font-family: "bellfair,serif";
-    font-weight: 300;
-    font-size: 1.2rem;
-    padding-bottom: .8rem;
-    color: #d0d6f962;
-}
-.crewMain .body .desc .mainHeading{
-    font-size: 1.7rem;
-    font-weight: 300;
-}
-.crewMain .dest-intro img{
-    height: 100%;
-    margin: 0;
-}
-.crewMain .body .dots{
-    display: flex;
-    gap: .7rem;
-}
-.dots a:hover{
-    border: none;
- }
-.crewMain .body .dots .dot{
-    width: 15px;height: 15px;
-    border-radius: 50%;
-    background-color: white;
-}
-.crewMain .body  .dots .dot:hover{
-    background-color: #D0D6F9;
-}
-/* end of crew page */
-
-/* start of technology page */
-.technology{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-.technology main{
-    flex: 1;
-    padding: 0 0 0 4rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-.technology main .dest-intro{
-    flex-basis: 40%;
-    gap: 2rem;
-}
-.dest-intro .explanation{
-    display: flex;
-    gap: 2rem;
-}
-.explanation .numbering .number{
-    width: 70px;height: 70px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;align-items: center;
-    background-color: white;
-    color: black;
-    margin-bottom: 1rem;
-}
-.explanation .exp .subHead{
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    color: #D0D6F9;
-}
-.explanation .exp {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-.explanation .exp .mainHead{
-    font-family: "bellefair,serif";
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 100;
-    margin-bottom: 2rem;
-}
-.explanation .exp p{
-    font-size: 1.2rem;
-    font-weight: 100;
-}
-.technology main .body img{
-    height: 80%;
-}
 
 
 @media screen and (max-width:768px){
@@ -308,12 +122,7 @@ main .body .desc .mainHeading{
         background: url(assets/home/background-home-tablet.jpg);
         padding: 0;
     }
-    body.destination{
-        background: url(assets/destination/background-destination-tablet.jpg);
-    }
-    body.crew{
-        background: url(assets/crew/background-crew-tablet.jpg);
-    }
+    /* start of header */
     header{
         font-size: 65%;
         padding: 0;
@@ -329,15 +138,13 @@ main .body .desc .mainHeading{
         display: none;
         padding-right: 4px;
     }
+    /* end of header */
+
+    /* start of general styles */
     main{
         padding:  0 2rem;
         text-align: center;
         flex-direction: column;
-    }
-    main .Intro{
-        flex-basis: auto;
-        width: 64%;
-        margin-bottom: 1rem;
     }
     .subHeading{
         font-size: .9rem;
@@ -347,23 +154,21 @@ main .body .desc .mainHeading{
          font-weight: 400;
          margin:0;
      }
-    main .explore,main .dest-intro .subHeading,main .dest-intro img{
-        align-self: center;
+     /* end of general styles */
+     body.home main{
+        align-items: center;
     }
-
-    main .dest-intro{
+    main .Intro{
         flex-basis: auto;
-        width: 100%;
+        width: 64%;
+        margin-bottom: 1rem;
     }
-    main .dest-intro img{
-        width:250px ;height:250px ;
+    main .explore{
+        align-self: center;
     }
     main .body{
         flex-basis: auto;
         text-align: center;
-    }
-    main .body .body-nav{
-        margin-left: 30%;
     }
     main .details{
     justify-content: center;
@@ -375,20 +180,6 @@ main .body .desc .mainHeading{
      main .details h2 p{
         font-size: 2rem;
      }
-
-     .crewMain .body{
-        align-items: center;
-        padding-bottom: 2rem;
-     }
-     .crewMain .body .desc .title{
-        font-size: 1.4rem;
-     }
-     .crewMain .body .dots .dot{
-        width: 10px;height: 10px;
-     }
-     .crewMain .body .desc{
-        width: 50%;
-     }
 }
 
 @media screen and (max-width:375px){
@@ -397,12 +188,7 @@ main .body .desc .mainHeading{
         background-repeat: no-repeat;
         background-size: cover;
     }
-    body.destination{
-        background: url(assets/destination/background-destination-mobile.jpg);
-    }
-    body.crew{
-        background: url(assets/crew/background-crew-mobile.jpg);
-    }
+    /* start of header */
     header{
         font-size: 70%;
         padding: 1rem;
@@ -440,11 +226,11 @@ main .body .desc .mainHeading{
     header .nav-bar a .list-no{
         display: inline;
     }
+    /* end of header */
+
+    /* start of general styles */
     main{
         padding: 0 1rem;
-    }
-    main .Intro{
-        width: 100%;
     }
     .subHeading{
         font-size: .7rem;
@@ -456,58 +242,15 @@ main .body .desc .mainHeading{
      .content{
         margin:1rem 0 2rem 0;
     }
-    
+     /* end of general styles */
+     main .Intro{
+     width: 100%;
+    }
     main .explore{
         margin-top: 4rem;
     }
     main .explore .mainBtn{
         padding:4rem 1.9rem;
         font-size: 1rem;
-    }
-    main .moon-intro img{
-        width:200px ;height:200px ;
-        margin: .5rem 0 1rem 0;
-    }
-    main .dest-intro.subHeading{
-        align-self: center;
-    }
-    main .body .body-nav{
-        margin-left: 12%;
-    }
-    main .details{
-        flex-direction: column;
-        padding: 1.5rem 0;
-        gap: 1.7rem;
-    }
-     main .details h2{
-        font-size:.9rem;
-     }
-     main .details p{
-        font-size: 2rem;
-     }
-     .crewMain{
-        flex-flow: column-reverse;
-        position: relative;
-     }
-     .crewMain .dest-intro{
-        margin: 2rem 0;
-        border-bottom: 1px solid #D0D6F9;
-     }
-     .crewMain .body{
-        flex-flow: column-reverse;
-     }
-     .crewMain .body .subHeading{
-        align-self: center;
-        position: absolute;
-        top: 0;
-     }
-     .crewMain .body .desc{
-        width: auto;
-     }
-     .crewMain .body .desc .mainHeading{
-        font-size: 1.5rem;
-    }
-    .crewMain .body .desc .content{
-        font-size: 1.2rem;
-    }
+    } 
 }
