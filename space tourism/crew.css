@@ -1,0 +1,61 @@
+
+.crew{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.crewMain {
+    flex: 1;
+}
+.crewMain .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+    gap: 2rem;
+}
+.crewMain .body .subHeading{
+    align-self:start;
+}
+.crewMain .body .desc{
+    border: none;
+}
+.crewMain .body .desc .title{
+    text-transform: uppercase;
+    font-family: "bellfair,serif";
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding-bottom: .8rem;
+    color: #d0d6f962;
+}
+.crewMain .body .desc .mainHeading{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.crewMain .dest-intro img{
+    height: 100%;
+    margin: 0;
+}
+.crewMain .body .dots{
+    display: flex;
+    gap: .7rem;
+}
+.dots a:hover{
+    border: none;
+ }
+.crewMain .body .dots .dot{
+    width: 15px;height: 15px;
+    border-radius: 50%;
+    background-color: white;
+}
+.crewMain .body  .dots .dot:hover{
+    background-color: #D0D6F9;
+}
+@media screen and (max-width:768px){
+
+
+}
+@media screen and (max-width:375px){
+
+    
+}
