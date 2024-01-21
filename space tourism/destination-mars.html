@@ -1,78 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body class="destination">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <header class="header">
-    <img src="assets/shared/logo.svg" alt="logo" width="35px" height="35px">
-    <nav class="nav-bar">
-      <div class="close-icon" onclick="toggleMenu()">
-        <img src="assets/shared/icon-close.svg" alt="close-icon" class="close-icon" width="19px" height="19px" >
-      </div>
-      <a href="index.html"><b class="list-no">00</b> home </a>
-      <a href="destination-moon.html"><b class="list-no">01</b> destination</a>
-      <a href="crew-commander.html"><b class="list-no">02</b> crew</a>
-      <a href=""><b class="list-no">03</b> technology</a>
-    </nav>
-    <img src="assets/shared/icon-hamburger.svg" alt="menu-icon" class="menu-icon" width="24px" height="21px" onclick="toggleMenu()">
-  </header>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="destination .css" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="./assets/favicon-32x32.png"
+        />
 
+        <title>Frontend Mentor | Space tourism website</title>
+      </head>
+      <body class="destination">
+        <header class="header">
+          <img
+            src="assets/shared/logo.svg"
+            alt="logo"
+            width="35px"
+            height="35px"
+          />
+          <nav class="nav-bar">
+            <div class="close-icon" onclick="toggleMenu()">
+              <img
+                src="assets/shared/icon-close.svg"
+                alt="close-icon"
+                class="close-icon"
+                width="19px"
+                height="19px"
+              />
+            </div>
+            <a href="index.html"><b class="list-no">00</b> home </a>
+            <a href="destination-moon.html"
+              ><b class="list-no">01</b> destination</a
+            >
+            <a href="crew-commander.html"><b class="list-no">02</b> crew</a>
+            <a href="technology-vehicle.html"><b class="list-no">03</b> technology</a>
+          </nav>
+          <img
+            src="assets/shared/icon-hamburger.svg"
+            alt="menu-icon"
+            class="menu-icon"
+            width="24px"
+            height="21px"
+            onclick="toggleMenu()"
+          />
+        </header>
 
-  <main>
+        <main>
+          <section class="dest-intro">
+            <p class="subHeading">
+              <b class="intro-no">01</b> Pick your destination
+            </p>
+            <img
+              src="assets/destination/image-mars.png"
+              alt="picture of the mars"
+              width="300px"
+              height="300px"
+            />
+          </section>
 
-    <section class="dest-intro">
-      <p class="subHeading"> <b class="intro-no">01</b> Pick your destination</p>
-      <img src="assets/destination/image-mars.png" alt="picture of the mars" width="300px" height="300px">
-    </section>
-    
-    <section class="body">
-      <nav class="body-nav">
-        <a href="destination-moon.html" >moon</a>
-        <a href="destination-mars.html" >mars</a>
-        <a href="destination-europa.html" >europa</a>
-        <a href="destination-titan.html">titan</a>
-      </nav>
-      
-      <section class="desc">
-        <h1 class="mainHeading">Mars</h1>
-        <p class="content">Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, 
-          the tallest planetary mountain in our solar system. It's two and a half times 
-          the size of Everest!</p> 
-      </section>
+          <section class="body">
+            <nav class="body-nav">
+              <a href="destination-moon.html">moon</a>
+              <a href="destination-mars.html">mars</a>
+              <a href="destination-europa.html">europa</a>
+              <a href="destination-titan.html">titan</a>
+            </nav>
 
-      <section class="details">
-        
-        <div class="distance">
-          <h2>Avg.  distance</h2>
-          <p> 225 mil. km</p>
-        </div>
+            <section class="desc">
+              <h1 class="mainHeading">Mars</h1>
+              <p class="content">
+                Don't forget to pack your hiking boots. You'll need them to
+                tackle Olympus Mons, the tallest planetary mountain in our solar
+                system. It's two and a half times the size of Everest!
+              </p>
+            </section>
 
-        <div class="travel-time">
-          <h2>Est.  travel time</h2>
-          <p>9 months</p>
-        </div>
-       
-      </section>
-    </section>
-  </main>
-  <script src="script.js" defer></script>
-</body>
+            <section class="details">
+              <div class="distance">
+                <h2>Avg. distance</h2>
+                <p>225 mil. km</p>
+              </div>
+
+              <div class="travel-time">
+                <h2>Est. travel time</h2>
+                <p>9 months</p>
+              </div>
+            </section>
+          </section>
+        </main>
+        <script src="script.js" defer></script>
+      </body>
+    </html>
+  </body>
 </html>

@@ -5,7 +5,7 @@ body.destination{
 main .dest-intro{
     display: flex;
     flex-direction: column;
-    flex-basis: 30%;
+    flex-basis: 33%;
 }
 main .dest-intro .subHeading{
     align-self: start;
@@ -71,15 +71,20 @@ main .body .desc .mainHeading{
         flex-basis: auto;
         width: 100%;
     }
+    main .dest-intro .subHeading,  main .dest-intro img{
+        align-self: center;
+    }
     main .dest-intro img{
         width:250px ;height:250px ;
     }
     main .body{
         flex-basis: auto;
         text-align: center;
+        display: flex;
+        flex-direction: column;
     }
     main .body .body-nav{
-        margin-left: 30%;
+        align-self: center;
     }
     main .details{
     justify-content: center;
@@ -98,6 +103,21 @@ main .body .desc .mainHeading{
     body.destination{
         background: url(assets/destination/background-destination-mobile.jpg);
     }
+    main .dest-intro img{
+        width:200px ;height:200px;
+        margin: .5rem 0 1rem 0;
+    }
+    main .details{
+        flex-direction: column;
+        padding: 1.5rem 0;
+        gap: 1.7rem;
+    }
+     main .details h2{
+        font-size:.9rem;
+     }
+     main .details p{
+        font-size: 2rem;
+     }
     
     
  }
