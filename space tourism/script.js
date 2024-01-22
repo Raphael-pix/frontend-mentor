@@ -4,17 +4,11 @@ const links = document.querySelectorAll("a")
 function toggleMenu(){
     nav.classList.toggle("visible")
 }
-
-
-links.forEach(link=>{
-    console.log(link)
-})
-console.log(window.location.href)
-function underline(){
+function active(){
     links.forEach(link =>{
         if(link.href === window.location.href){
             link.classList.toggle("active")
         }
     })
 }
-window.addEventListener("load",underline())
+window.addEventListener("load",active())
