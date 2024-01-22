@@ -34,13 +34,16 @@ body.crew{
     display: flex;
     gap: .7rem;
 }
-.dots a:hover{
+.dots a,.dots a:hover{
     border: none;
+ }
+ .dots a.active .dot{
+    background-color: white;
  }
 .body .dots .dot{
     width: 15px;height: 15px;
     border-radius: 50%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.347);
 }
 .body  .dots .dot:hover{
     background-color: #D0D6F9;

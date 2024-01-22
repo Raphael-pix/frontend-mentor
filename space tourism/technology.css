@@ -32,10 +32,10 @@ body.technology{
     color: white;
     margin-bottom: 1rem;
 }
-.explanation .numbering a:hover{
+.explanation .numbering a{
     border: none;
 }
-.numbering a .number.active{
+.explanation .numbering a.active .number{
     background-color: white; 
     color: black;
 }
@@ -69,6 +69,9 @@ body.technology{
 }
 .technology main .body img{
     height: 80%;
+}
+.body img.landscape{
+    display: none;
 }
 
 @media screen and (max-width:768px){
@@ -115,6 +118,12 @@ body.technology{
      .technology main .body img{
         height: 300px;width: 100%;
      }
+    .body img.potrait{
+        display: none;
+     }
+    .body img.landscape{
+        display: block;
+     }
 }
 
 @media screen and (max-width:375px){
@@ -134,4 +143,10 @@ body.technology{
     .technology main .body{
         padding-top: 2rem;
     }
+    .body img.potrait{
+        display: block;
+     }
+    .body img.landscape{
+        display: none;
+     }
 }

@@ -1,5 +1,5 @@
 const nav = document.querySelector(".nav-bar")
-const links = document.querySelectorAll(".body-nav a")
+const links = document.querySelectorAll("a")
 
 function toggleMenu(){
     nav.classList.toggle("visible")
