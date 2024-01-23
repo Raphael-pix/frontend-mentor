@@ -20,7 +20,6 @@
     text-decoration: none;
     text-transform: capitalize;
     font-family: 'Ubuntu', sans-serif;
-    transition: all 1s linear;
 }
 body{
     min-height: 100vh;
@@ -37,6 +36,7 @@ main{
     padding: 1rem;
     box-shadow: 0 0 4px hsl(231, 11%, 63%);
     background-color: white;
+    transition: all .5s linear;
 }
 
 /* start of steps */
@@ -118,6 +118,14 @@ main .body form label{
     font-weight: 500;
     color:hsl(213, 96%, 18%) ;
     padding: .4rem 0;
+    position: relative;
+}
+main .body form label .error{
+    position: absolute;
+    right: 0;
+    color:  #ed3548;
+    font-weight: 700;
+    text-transform: initial;
 }
 main .body form input{
     padding: .7rem .8rem;
@@ -129,6 +137,9 @@ main .body form input{
     color: hsl(231, 11%, 63%);
     outline: none;
     min-width: 231px;
+}
+main .body form input.error{
+    border: 1px solid  #ed3548;
 }
 main .body form input[type="submit"]{
     min-width: 30%;
@@ -142,7 +153,6 @@ main .body form input[type="submit"]{
     margin-top: 2rem;
     text-align: center;
 }
-
 @media(max-width:725px){
     main .body{
         padding: 1rem;

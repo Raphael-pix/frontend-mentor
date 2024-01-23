@@ -47,19 +47,19 @@
 
             <form action="" id="form" novalidate>
                 <section class="formInput">
-                    <label for="name" >name</label>
-                    <input type="text" name="name" placeholder="e.g. Stephen King">
+                    <label for="name" >name <span class="error"></span></label>
+                    <input type="text" name="name" placeholder="e.g. Stephen King" class="input">
                 </section>
                 <section class="formInput">
-                    <label for="email" >email address</label>
-                    <input type="email" name="email" placeholder="e.g. stephenking@lorem.com">
+                    <label for="email" >email address <span class="error"></span></label>
+                    <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" class="input">
                 </section>
                 <section class="formInput">
-                    <label for="number" >phone number</label>
-                    <input type="text" name="number" placeholder="e.g. +1 234 567 890">
+                    <label for="number" >phone number <span class="error"></span></label>
+                    <input type="text" name="number" placeholder="e.g. +1 234 567 890" class="input">
                 </section>
                 <section class="formInput">
-                    <input type="submit" value="next step">
+                    <input type="submit" value="next step" class="submit" onsubmit="checkRequired()">
                 </section>
             </form>
         </section>
