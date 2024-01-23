@@ -20,6 +20,7 @@
     text-decoration: none;
     text-transform: capitalize;
     font-family: 'Ubuntu', sans-serif;
+    transition: all 1s linear;
 }
 body{
     min-height: 100vh;
@@ -142,7 +143,11 @@ main .body form input[type="submit"]{
     text-align: center;
 }
 
-
+@media(max-width:725px){
+    main .body{
+        padding: 1rem;
+    }
+}
 @media(max-width:375px){
     body{
         display: block;
