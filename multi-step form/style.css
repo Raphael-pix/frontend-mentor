@@ -153,6 +153,96 @@ main .body form input[type="submit"]{
     margin-top: 2rem;
     text-align: center;
 }
+
+
+
+
+/* start of plan css */
+
+form .options{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+form .options .planInput{
+    padding: 1rem;
+    border: 1px solid hsl(213, 96%, 18%);
+    border-radius: 10px;
+}
+form .options .planInput img{
+    margin-bottom: 2rem;
+}
+form .options .planInput .details{
+    margin-right: 3rem;
+}
+.planInput .details h3{
+    font-size: 1rem;
+    color:  hsl(213, 96%, 18%);
+    padding-bottom: .3rem;
+}
+.planInput .details p{
+    font-size: .9rem;
+    color:  hsl(231, 11%, 63%);
+    text-transform: initial;
+}
+form #duration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: .6rem 0;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 7px;
+    position: relative;
+}
+#duration h4{
+    font-size: .7rem;
+    color:hsl(231, 11%, 63%);
+}
+#duration .duration-silder{
+    position: relative;
+    height: 17px;
+    background-color: red;
+    margin-right: 3rem;
+}
+#duration .duration-silder input{
+    display: none;
+}
+#duration .duration-silder .slider{
+    position: absolute;
+    top: 0;bottom: 0;
+    width: 35px;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+#duration .duration-silder .slider::before{
+    position: absolute;
+    top: 15%;left: 10%;
+    content: "";
+    height: .7rem;
+    width: .7rem;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+}
+#duration label input:checked + #duration label.slider {
+    background-color: #2196F3;
+}
+
+#duration label input:checked + #duration label.slider:before {
+    transform: translateX(35px);
+}
+
+
+/* end of plan css */
+
+
+
+
+
 @media(max-width:725px){
     main .body{
         padding: 1rem;

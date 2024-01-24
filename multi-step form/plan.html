@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon-32x32.png">
+    <title>Multi-step form - frontend Mentor</title>
+</head>
+<body>
+ 
+    <main class="container">
+        <section class="steps">
+            <section class="step">
+                <a href="index.html" class="number">1</a>
+                <div class="heads">
+                    <h1>step 1</h1>
+                    <h2>your info</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="plan.html" class="number">2</a>
+                <div class="heads">
+                    <h1>step 2</h1>
+                    <h2>select plan</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="add-ons.html" class="number">3</a>
+                <div class="heads">
+                    <h1>step 3</h1>
+                    <h2>add-ons</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="summary.html" class="number">4</a>
+                <div class="heads">
+                    <h1>step 4</h1>
+                    <h2>summary</h2>
+                </div>
+            </section>
+        </section>
+
+        <section class="body">
+            <h1>Select your plan</h1>
+            <h2>You have an option of monthly or yearly billing</h2>
+
+            <form action="" id="form" novalidate>
+                <section class="options">
+                    <section class="planInput">
+                        <!-- <input type="checkbox" name="plan" value="arcade" class="input"> -->
+                        <img src="assets/images/icon-arcade.svg" alt="arcade billing option" width="40px" height="40px">
+                        <section class="details">
+                            <h3 class="plan-name">Arcade</h3>
+                            <p>$9/mo</p>
+                        </section>
+                    </section>
+                    <section class="planInput">
+                        <img src="assets/images/icon-advanced.svg" alt="advanced billing option" width="40px" height="40px">
+                        <section class="details">
+                            <h3 class="plan-name">Advanced</h3>
+                            <p>$12/mo</p>
+                        </section>
+                    </section>
+                    <section class="planInput">
+                        <img src="assets/images/icon-pro.svg" alt="pro billing option" width="40px" height="40px">
+                        <section class="details">
+                            <h3 class="plan-name">pro</h3>
+                            <p>$15/mo</p>
+                        </section>
+                    </section>
+                </section>
+                
+                <section class="planInput" id="duration"> 
+                   <h4>monthly</h4>
+                    <section class="duration-silder">
+                        <input type="radio" name="duration" value="">
+                        <span class="slider"></span>
+                    </section>
+                    <h4>yearly</h4>
+                </section>
+               
+                <section class="planInput">
+                    <a href="" class="back">Go back</a>
+                    <input type="submit" value="next step" class="submit" onsubmit="checkRequired()">
+                </section>
+            </form>
+        </section>
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>
