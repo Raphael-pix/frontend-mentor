@@ -203,7 +203,6 @@ form #duration{
 #duration .duration-silder{
     position: relative;
     height: 17px;
-    background-color: red;
     margin-right: 3rem;
 }
 #duration .duration-silder input{
@@ -234,6 +233,18 @@ form #duration{
 
 #duration label input:checked + #duration label.slider:before {
     transform: translateX(35px);
+}
+
+form #buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+form #buttons a{
+    align-self: end;
+    font-size: .7rem;
+    font-weight: bold;
+    color:hsl(213, 96%, 18%);
 }
 
 
@@ -295,4 +306,22 @@ form #duration{
     .formInput:nth-child(4) input[type="submit"]{
         margin:1rem 2rem;
     }
+
+
+
+    /* start of plan css */
+    form .options{
+        display: flex;
+        flex-direction: column;
+    }
+    form .options .planInput{
+        display: flex;
+        gap: 1rem;
+        padding: .5rem 1rem;
+    }
+    form .options .planInput img{
+        margin-bottom: 0;
+    }
+
+    /* end of plan css */
 }

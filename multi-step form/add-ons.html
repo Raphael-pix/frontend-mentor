@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon-32x32.png">
+    <title>Multi-step form - frontend Mentor</title>
+</head>
+<body>
+ 
+    <main class="container">
+        <section class="steps">
+            <section class="step">
+                <a href="index.html" class="number">1</a>
+                <div class="heads">
+                    <h1>step 1</h1>
+                    <h2>your info</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="plan.html" class="number">2</a>
+                <div class="heads">
+                    <h1>step 2</h1>
+                    <h2>select plan</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="add-ons.html" class="number">3</a>
+                <div class="heads">
+                    <h1>step 3</h1>
+                    <h2>add-ons</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="summary.html" class="number">4</a>
+                <div class="heads">
+                    <h1>step 4</h1>
+                    <h2>summary</h2>
+                </div>
+            </section>
+        </section>
+
+        <section class="body">
+            <h1>Pick add-ons</h1>
+            <h2>Add-ons help enhance your gaming experience</h2>
+
+            <form action="" id="form" novalidate>
+                <section class="options">
+                    <section class="addInput">
+                        <input type="checkbox" name="add-on" value="online service" class="input">
+                        <section class="details">
+                            <h3 class="plan-name">Online service</h3>
+                            <p>access to multiplayer game</p>
+                        </section>
+                        <p>+$1/mo</p>
+                    </section>
+                    <section class="addInput">
+                        <input type="checkbox" name="add-on" value="larger storage" class="input">
+                        <section class="details">
+                            <h3 class="plan-name">larger storage</h3>
+                            <p>extra 1TB of cloud save</p>
+                        </section>
+                        <p>+$2/mo</p>
+                    </section>
+                    <section class="addInput">
+                        <input type="checkbox" name="add-on" value="customizable profile" class="input">
+                        <section class="details">
+                            <h3 class="plan-name">customizable profile</h3>
+                            <p>customize theme on your profile</p>
+                        </section>
+                        <p>+$2/mo</p>
+                    </section>
+                </section>
+               
+                <section class="addInput" id="buttons">
+                    <a href="" class="back">Go back</a>
+                    <input type="submit" value="next step" class="submit" onsubmit="checkRequired()">
+                </section>
+            </form>
+        </section>
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>
