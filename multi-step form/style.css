@@ -141,7 +141,7 @@ main .body form input{
 main .body form input.error{
     border: 1px solid  #ed3548;
 }
-main .body form input[type="submit"]{
+main .body form input[type="submit"],button{
     min-width: 30%;
     max-width: 105px;
     background-color:hsl(213, 96%, 18%);
@@ -244,13 +244,113 @@ form #buttons a{
     align-self: end;
     font-size: .7rem;
     font-weight: bold;
-    color:hsl(213, 96%, 18%);
+    color:hsl(231, 11%, 63%);
 }
 
 
 /* end of plan css */
 
 
+/* start of add-ons css */
+#add-ons .options{
+    flex-direction: column;
+}
+#add-ons .options .addInput{
+    display: flex;
+    gap: 1rem;
+    border: 1px solid hsl(229, 24%, 87%);
+    padding: .8rem 1.2rem ;
+    border-radius: 8px;
+    position: relative;
+}
+#add-ons .options .addInput input{
+    min-width: auto;
+}
+#add-ons .options .addInput .details{
+    margin-right:5rem;
+}
+#add-ons .options .addInput .details h3{
+    color:hsl(213, 96%, 18%);
+    font-size: .7rem;
+    text-transform: initial;
+    margin-bottom: 3px;
+} 
+#add-ons .options .addInput .details p{
+    color:hsl(231, 11%, 63%);
+    font-size: .7rem;
+    text-transform: initial;
+} 
+#add-ons .options .addInput .price{
+    position: absolute;
+    right: 2%; 
+    font-size: .8rem;
+    color: hsl(213, 96%, 18%);
+    align-self: end;
+    text-transform: initial;
+}
+
+/* end of add-ons css */
+
+/* start of summary css */
+#summary .options{
+    background-color: hsl(217, 100%, 97%);
+    flex-direction: column;
+    padding: .7rem 1rem;
+    border-radius: 10px;
+}
+#summary .options .summ,#summary .total{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(213, 96%, 18%);
+}
+#summary .options .summ h3,#summary .total h3{
+    font-size: .8rem;
+    color: hsl(231, 11%, 63%);
+    font-weight: 400;
+    text-transform: initial;
+}
+#summary .options .summ .price{
+    font-size: .7rem;
+    align-self: end;
+    font-weight: 500;
+}
+#summary .options .summ .summ-plan{
+    color:hsl(213, 96%, 18%) ;
+    font-weight: 600;
+}
+#summary .options .summ a{
+    font-size: .7rem;
+    color:hsl(231, 11%, 63%);
+    text-decoration: underline;
+}
+#summary .options .summ:nth-child(1) {
+    padding: 1rem 0;
+    border-bottom: 1px solid hsl(229, 24%, 87%);
+}
+#summary .options .summ:nth-child(1) .price{
+    font-weight: 600;
+}
+#summary .total{
+    padding:0 1rem;
+}
+#summary .total .price{
+    color: hsl(243, 100%, 62%);
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: initial;
+}
+#summary #buttons button{
+    cursor: pointer;
+    padding:.5rem 1rem;
+    background-color:hsl(243, 100%, 62%);
+}
+
+
+
+
+
+
+/* end of summary css */
 
 
 
@@ -297,17 +397,25 @@ form #buttons a{
     }
     main .body h2{
         margin-bottom: 0;
+        font-size: .9rem;
+        margin-bottom: 1rem;
     }
-    main .body form .formInput:nth-child(4){
+
+    form #buttons{
         position: fixed;
         bottom: 0;left: 0;right: 0;
+        padding: 1.5rem 0.5rem;
         background-color: white;
     }
-    .formInput:nth-child(4) input[type="submit"]{
-        margin:1rem 2rem;
+    form #buttons a,main .body form input[type="submit"],button{
+        align-self: center;
     }
-
-
+    main .body form input[type="submit"],button{
+        margin-top: auto;
+    }
+    #index #buttons input[type="submit"]{
+        align-self: end;
+    }
 
     /* start of plan css */
     form .options{
@@ -324,4 +432,8 @@ form #buttons a{
     }
 
     /* end of plan css */
+
+    #add-ons .options .addInput .details{
+        margin-right:2rem;
+    }
 }

@@ -45,7 +45,7 @@
             <h1>Personal info</h1>
             <h2>Please provide your name, email address and phone number</h2>
 
-            <form action="" id="form" novalidate>
+            <form action="" id="index" class="form" novalidate>
                 <section class="formInput">
                     <label for="name" >name <span class="error"></span></label>
                     <input type="text" name="name" placeholder="e.g. Stephen King" class="input">
@@ -58,7 +58,7 @@
                     <label for="number" >phone number <span class="error"></span></label>
                     <input type="text" name="number" placeholder="e.g. +1 234 567 890" class="input">
                 </section>
-                <section class="formInput">
+                <section class="formInput" id="buttons">
                     <input type="submit" value="next step" class="submit" onsubmit="checkRequired()">
                 </section>
             </form>

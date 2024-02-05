@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon-32x32.png">
+    <title>Multi-step form - frontend Mentor</title>
+</head>
+<body>
+ 
+    <main class="container">
+        <section class="steps">
+            <section class="step">
+                <a href="index.html" class="number">1</a>
+                <div class="heads">
+                    <h1>step 1</h1>
+                    <h2>your info</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="plan.html" class="number">2</a>
+                <div class="heads">
+                    <h1>step 2</h1>
+                    <h2>select plan</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="add-ons.html" class="number">3</a>
+                <div class="heads">
+                    <h1>step 3</h1>
+                    <h2>add-ons</h2>
+                </div>
+            </section>
+            <section class="step">
+                <a href="summary.html" class="number">4</a>
+                <div class="heads">
+                    <h1>step 4</h1>
+                    <h2>summary</h2>
+                </div>
+            </section>
+        </section>
+
+        <section class="body">
+            <h1>Finishing up</h1>
+            <h2>Double check everything looks OK before confirming</h2>
+
+            <form action="" id="summary" class="form" novalidate>
+                <section class="options">
+                    <section class="summ">
+                        <section class="details">
+                            <h3 class="summ-plan">Arcade(<span class="summ-time">monthly</span>)</h3>
+                            <a href="" class="change">change</a>
+                        </section>
+                        <p class="price">$9/mo</p>
+                    </section>
+
+                    <section class="summ">
+                        <h3>Online service</h3>
+                        <p class="price">+$1/mo</p>
+                    </section>
+
+                    <section class="summ">
+                        <h3>Larger storage</h3>
+                        <p class="price">+$2/mo</p>
+                    </section>
+                </section>
+
+                <section class="total">
+                    <h3>Total(Per month)</h3>
+                    <p class="price">+$12/mo</p>
+                </section>
+               
+                <section id="buttons">
+                    <a href="" class="back">Go back</a>
+                    <button class="confirm">confirm</button>
+                </section>
+            </form>
+        </section>
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>
